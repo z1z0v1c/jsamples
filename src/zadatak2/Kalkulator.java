@@ -16,9 +16,11 @@ public class Kalkulator {
 			System.out.println("Unesite drugi broj: ");
 			int broj2 = unosBroja();
 
+			//odabir operacije
 			System.out.println("Unesite zeljenu operaciju (s, o, m, d): ");
 			String operacija = unosStringa();
 
+			//prikazivanje rezultata za izabranu operaciju
 			switch (operacija) {
 			case "s":
 				System.out.println("Zbir unetih brojeva je: " + (broj1 + broj2));
@@ -40,16 +42,22 @@ public class Kalkulator {
 			default:
 				System.out.println("Izabrali ste nepostojecu operaciju");
 			}
+			
+			//izlaz iz programa
 			System.out.println("Da li zelite da nastavite?");
-			if (sc.next().equalsIgnoreCase("ne")) {
-				break;
+			if (nastavak().equalsIgnoreCase("da")) {
+				continue;				
+			}
+			else {
+				System.out.println("Kraj programa");
+				break;				
 			}
 
 		}
 		sc.close();
 	}
 
-	// provera da li je unet int
+	// metoda za proveru unosa broja
 	private static int unosBroja() {
 		while (!sc.hasNextInt()) {
 			System.out.println("Pogresan unos! Pokusajte ponovo!");
@@ -58,15 +66,22 @@ public class Kalkulator {
 		return sc.nextInt();		
 	}
 
-	// provera da li je unet String koji sadrzi neku od osmd vrednosti
-	// mada nisam morao zbog default case - a u switchu
+	// metoda za prveru unosa stringa
 	private static String unosStringa() {
-		Scanner sc = new Scanner(System.in);
 		while (!sc.hasNext("[somd]")) {
 			System.out.println("Pogresan unos! Pokusajte ponovo!");
 			sc.next();
 		}
-		return sc.next();
-				
+		return sc.next();				
+	}
+	
+	// metoda za validaciju odgovora pri izlasku iz programa
+	private static String nastavak() {
+		String s = sc.next();
+		while (!(s.equalsIgnoreCase("da") || s.equalsIgnoreCase("ne"))) {
+			System.out.println("Pogresan unos! Pokusajte ponovo!");
+			 s = sc.next();
+		}
+		return s;	 		
 	}
 }
