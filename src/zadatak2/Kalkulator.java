@@ -1,21 +1,23 @@
-import java.util.Scanner;
+package zadatak2;
+
+ import java.util.Scanner;
 
 public class Kalkulator {
 
+	public static Scanner sc = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
 
 		while (true) {
 
 			System.out.println("Unesite prvi broj: ");
-			int broj1 = unosInt();
+			int broj1 = unosBroja();
 
 			System.out.println("Unesite drugi broj: ");
-			int broj2 = unosInt();
+			int broj2 = unosBroja();
 
 			System.out.println("Unesite zeljenu operaciju (s, o, m, d): ");
-			String operacija = unosString();
+			String operacija = unosStringa();
 
 			switch (operacija) {
 			case "s":
@@ -48,29 +50,23 @@ public class Kalkulator {
 	}
 
 	// provera da li je unet int
-
-	private static int unosInt() {
-		Scanner sc = new Scanner(System.in);
+	private static int unosBroja() {
 		while (!sc.hasNextInt()) {
 			System.out.println("Pogresan unos! Pokusajte ponovo!");
 			sc.next();
 		}
-		int i = sc.nextInt();
-		sc.close();
-		return i;
-		
+		return sc.nextInt();		
 	}
 
 	// provera da li je unet String koji sadrzi neku od osmd vrednosti
 	// mada nisam morao zbog default case - a u switchu
-	private static String unosString() {
+	private static String unosStringa() {
 		Scanner sc = new Scanner(System.in);
 		while (!sc.hasNext("[somd]")) {
 			System.out.println("Pogresan unos! Pokusajte ponovo!");
 			sc.next();
 		}
-		String s = sc.next();
-		sc.close();
-		return s;		
+		return sc.next();
+				
 	}
 }
