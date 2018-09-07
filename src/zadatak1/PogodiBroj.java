@@ -1,10 +1,14 @@
+package zadatak1;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class PogodiBroj {
 	
+	public static Scanner sc = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		
 		while (true) {
 			
 			int unetiBroj;
@@ -16,7 +20,7 @@ public class PogodiBroj {
 			    }
 			    unetiBroj = sc.nextInt();
 			    
-			} while (unetiBroj <= 0 || unetiBroj > 50 || isEmpty(unetiBroj));
+			} while (unetiBroj <= 0 || unetiBroj > 50);
 						
 			Random r = new Random();
 			int randomBroj = r.nextInt(50) + 1;
@@ -24,22 +28,28 @@ public class PogodiBroj {
 
 			if (randomBroj == unetiBroj) {
 				System.out.println("Neverovatno!Pogodili ste tacan broj! Odigrajte Loto!!!");
-			} else if ((randomBroj - 5) <= unetiBroj) {
+			} else if (5 >= Math.abs(unetiBroj - randomBroj)) {
 				System.out.println("Dobar pokusaj, bili ste jako blizu!");
 			} else {
 				System.out.println("Vise srece sledeci put...");
-			}
+			}			
 			System.out.println("Da li zelite da nastavite?");
-			if (sc.next().equalsIgnoreCase("ne")) {
+			if (unosString().equalsIgnoreCase("da")) {
+				continue;				
+			}
+			else 
 				break;
-				
-			}						
+			
 		}
 		sc.close();
+	}	
+
+private static String unosString() {
+	String s = sc.next();
+	while (!(s.equalsIgnoreCase("da") || s.equalsIgnoreCase("ne"))) {
+		System.out.println("Pogresan unos! Pokusajte ponovo!");
+		 s = sc.next();
 	}
-	
-	public static boolean isEmpty(Integer i) {
-		String s = i.toString();
-		return s.equals(null) || s.trim().length() == 0;
-	}
+	return s;	 		
+}
 }
