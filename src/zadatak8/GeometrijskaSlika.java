@@ -6,16 +6,16 @@ public abstract class GeometrijskaSlika {
 	private String boja;
     private boolean ispunjen;
     
-    public GeometrijskaSlika() {
+    protected GeometrijskaSlika() {
 		super();
 	}
 	
-    public GeometrijskaSlika(String boja) {
+    protected GeometrijskaSlika(String boja) {
 		super();
 		this.boja = boja;
 	}
 
-	public GeometrijskaSlika(String boja, boolean ispunjen) {
+	protected GeometrijskaSlika(String boja, boolean ispunjen) {
 		super();
 		this.boja = boja;
 		this.ispunjen = ispunjen;
