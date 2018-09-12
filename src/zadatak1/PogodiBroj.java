@@ -11,7 +11,7 @@
 package zadatak1;
 
 /**
- * @author Radovan.Olujic
+ * @author Aleksandar.Zizovic
  *
  */
 
