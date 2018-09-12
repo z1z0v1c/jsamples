@@ -3,11 +3,12 @@
  * i ispisati prvih 5 clanova niza na standardni izla. Koristiti klasu Arrays.
  */
 
+package zadatak7;
+
 /**
  * @author Aleksandar.Zizovic
  *
  */
-package zadatak7;
 
 import java.util.Scanner;
 import java.util.Arrays;
@@ -37,7 +38,7 @@ public class Niz {
 		sc.close();
 	}
 
-	// metoda za validaciju unosa broja
+	// validacija unosa broja
 	private static int unosBroja() {
 		while (!sc.hasNextInt()) {
 			System.out.println(POGRESAN_UNOS);
