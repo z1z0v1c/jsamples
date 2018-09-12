@@ -1,59 +1,83 @@
+/**
+ * Napistai program za pogadjanje slucajnog generisanog broja u opsegu od 1 do 50.
+ * 
+ * Program treba da radi na sledeci nacin: Korisnik preko standardnog ulaza unosi jedan ceo broj.Broj koji
+ * treba pogoditi treba generisati u opsegu od 1 do 50 koristeci klasu Random. Posle toga ispisati taj 
+ * trazeni broj na standardni izlaz i u zavisnosti od rezultata pogadjanja ispisati odogvarajucu poruku. 
+ * Ako je pogodjen tacan broj napisati: Neverovatno pogodili ste tacan broj, ako je razlika izmedju brojeva
+ * 5 ili manja : Dobar pokusaj, bili ste jako blizu, i ako je razlika veca od 5 : Vise srece sledeci put.
+ */
+
 package zadatak1;
+
+/**
+ * @author Radovan.Olujic
+ *
+ */
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class PogodiBroj {
 
-	public static Scanner sc = new Scanner(System.in);
-
+	private static Scanner sc = new Scanner(System.in);
+	private static final String UNOS = "Unesite broj od 1 do 50: ";
+	private static final String POGRESAN_UNOS = "Pogresan unos! Pokusajte ponovo!";
+	private static final String POGRESAN_UNOS_BR = "Uneta vrednost nije broj! Pokusajte ponovo!";
+	private static final String POGODAK = "Neverovatno!Pogodili ste tacan broj! Odigrajte Loto!!!";
+	private static final String BLIZU = "Dobar pokusaj, bili ste jako blizu!";
+	private static final String PROMASAJ = "Vise srece sledeci put...";
+	private static final String NASTAVAK = "Da li zelite da nastavite?";
+	private static final String KRAJ = "Kraj programa!";
+	
 	public static void main(String[] args) {
 
 		while (true) {
 
 			int unetiBroj;
+			
+			//unos i validacija broja
 			do {
-				// unos broja i validacija
-				System.out.println("Unesite broj od 1 do 50: ");
+				System.out.println(UNOS);
 				while (!sc.hasNextInt()) {
-					System.out.println("Uneta vrednost nije broj! Pokusajte ponovo!");
+					System.out.println(POGRESAN_UNOS_BR);
 					sc.next();
 				}
 				unetiBroj = sc.nextInt();
 
-			} while (unetiBroj <= 0 || unetiBroj > 50);
+			} while ( 0 >= unetiBroj || 50 < unetiBroj);
 
-			// generisanje random broja
+			//generisanje i prikaz random broja
 			Random r = new Random();
 			int randomBroj = r.nextInt(50) + 1;
-			System.out.println("Zadati broj je: " + randomBroj);
+			System.out.println(new StringBuilder("Zadati broj je: ").append(randomBroj).toString());
 
-			// prikaz rezultata
+			//provera pogotka
 			if (randomBroj == unetiBroj) {
-				System.out.println("Neverovatno!Pogodili ste tacan broj! Odigrajte Loto!!!");
+				System.out.println(POGODAK);
 			} else if (5 >= Math.abs(unetiBroj - randomBroj)) {
-				System.out.println("Dobar pokusaj, bili ste jako blizu!");
+				System.out.println(BLIZU);
 			} else {
-				System.out.println("Vise srece sledeci put...");
+				System.out.println(PROMASAJ);
 			}
-
-			// izlaz iz programa
-			System.out.println("Da li zelite da nastavite?");
-			if (unosString().equalsIgnoreCase("da")) {
-				continue;
-			} else
+			
+			//nastavak ili izlaz iz programa
+			System.out.println(NASTAVAK);
+			if (!nastavak().equalsIgnoreCase("da")) {
+				System.out.println(KRAJ);
 				break;
+			}
 		}
 		sc.close();
 	}
-
-	// metoda za validaciju odgovora pri izlasku iz programa
-	private static String unosString() {
+	
+	//validacija odgovora za nastavak ili izlaz iz programa
+	private static String nastavak() {
 		String s = sc.next();
 		while (!(s.equalsIgnoreCase("da") || s.equalsIgnoreCase("ne"))) {
-			System.out.println("Pogresan unos! Pokusajte ponovo!");
-			s = sc.next();
+			System.out.println(POGRESAN_UNOS);
+			 s = sc.next();
 		}
-		return s;
+		return s;	 		
 	}
 }
