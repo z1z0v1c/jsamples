@@ -13,6 +13,8 @@
  */
 package zadatak10;
 
+import java.util.ArrayList;
+
 /**
  * @author Aleksandar.Zizovic
  *
@@ -24,15 +26,34 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		Proizvod mlecniProizvod = new MlecniProizvod("Kisela pavlaka", 50, "20.2.2019.", "kravlje mleko");
-		Proizvod kafa = new Kafa("Nes kafa", 300, "5.8.2019.", true) ;
-		Proizvod sok = new Sok("Next", 130, "17.5.2019.", "pomorandza");
-		Proizvod meso = new Meso("Belo meso", 400, "12.12.2018", "pilece meso");
+		Proizvod mlecniProizvod1 = new MlecniProizvod("Kisela pavlaka", 50, "20.2.2019.", "kravlje mleko");
+		Proizvod kafa1 = new Kafa("Nes kafa", 300, "5.8.2019.", true) ;
+		Proizvod sok1 = new Sok("Next", 130, "17.5.2019.", "pomorandza");
+		Proizvod meso1 = new Meso("Belo meso", 400, "12.12.2018", "pilece meso");
 		
-		System.out.println(mlecniProizvod.toString());
-		System.out.println(kafa.toString());
-		System.out.println(sok.toString());
-		System.out.println(meso.toString());
+		ArrayList<Proizvod> lista1 = new ArrayList<>();
+		lista1.add(mlecniProizvod1);
+		lista1.add(kafa1);
+		lista1.add(sok1);
+		lista1.add(meso1);
+		
+		Firma firma1 = new Firma(1200, lista1);
+		
+		Proizvod mlecniProizvod2 = new MlecniProizvod("Kisela pavlaka", 50, "20.2.2019.", "kravlje mleko");
+		Proizvod kafa2 = new Kafa("Nes kafa", 300, "5.8.2019.", true) ;
+		Proizvod sok2 = new Sok("Next", 130, "17.5.2019.", "pomorandza");
+		Proizvod meso2 = new Meso("Belo meso", 400, "12.12.2018", "pilece meso");
+		
+		ArrayList<Proizvod> lista2 = new ArrayList<>();
+		lista1.add(mlecniProizvod2);
+		lista1.add(kafa2);
+		lista1.add(sok2);
+		lista1.add(meso2);
+		
+		Firma firma2 = new Firma(700, lista2);
+		
+		firma1.porudzbina();
+		firma2.porudzbina();
 	}
 
 }
