@@ -1,5 +1,17 @@
+
 package zadatak3;
+
 import java.util.Scanner;
+
+/**
+ * Uraditi modifikaciju domaceg iz predhodne nedelje. Vrteti se u petlji dok ne pogodimo broj, 
+ * ili budemo barem blizu (razlika manja od 5). Taj deo sa proverom pogodtka izdvojiti u zasebnu
+ * metodu, kojoj se kao argument prosledjuje broj koji tipujemo, a povratna vrednost metode je 
+ * 0 - ako smo pogodili, 1 - ako smo bili blizu,2 - ako smo promasili. Na osnovu toga ostajemo
+ * ili izlazimo iz petlje i zavrsavamo program sa odgovarajucom porukom.
+ * 
+ * @author Aleksandar.Zizovic
+ */
 
 public class ParniBrojevi {
 
@@ -59,5 +71,4 @@ public class ParniBrojevi {
 		}
 		return s;	 		
 	}
-
 }
