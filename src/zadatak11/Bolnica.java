@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package zadatak11;
 
 import java.util.ArrayList;
@@ -9,6 +7,7 @@ import java.util.ArrayList;
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Bolnica {
 
 	private String naziv;
@@ -18,12 +17,10 @@ public class Bolnica {
 	private ArrayList<MedicinskaSestra> listaSestara;
 	
 	public Bolnica() {
-		super();
 	}
 
 	public Bolnica(String naziv, Zaposleni direktor, ArrayList<OstaloOsoblje> listaOsoblja,
 			ArrayList<Lekar> listaLekara, ArrayList<MedicinskaSestra> listaSestara) {
-		super();
 		this.naziv = naziv;
 		this.direktor = direktor;
 		this.listaOsoblja = listaOsoblja;

@@ -5,6 +5,7 @@ package zadatak11;
  * @author Aleksandar.Zizovic
  *
  */
+
 public abstract class Zaposleni {
 
 	private String ime;
@@ -15,7 +16,6 @@ public abstract class Zaposleni {
 	
 	
 	protected Zaposleni() {
-		super();
 	}
 
 
@@ -76,10 +76,5 @@ public abstract class Zaposleni {
 
 	public void setDatumRodjenja(String datumRodjenja) {
 		this.datumRodjenja = datumRodjenja;
-	}
-
-	
-	
-	
-	
+	}	
 }

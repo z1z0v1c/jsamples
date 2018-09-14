@@ -5,12 +5,12 @@ package zadatak11;
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Lekar extends Zaposleni{
 
 	private String fakultet;
 
 	public Lekar() {
-		super();
 	}
 
 	public Lekar(String ime, String prezime, String adresa, String telefon, String datumRodjenja, String fakultet) {
@@ -24,7 +24,5 @@ public class Lekar extends Zaposleni{
 
 	public void setFakultet(String fakultet) {
 		this.fakultet = fakultet;
-	}
-	
-		
+	}		
 }

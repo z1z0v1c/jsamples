@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package zadatak11;
 
 import java.util.ArrayList;
@@ -9,12 +7,12 @@ import java.util.ArrayList;
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Firma {
 
 	private ArrayList<Bolnica> listaBolnica;
 
 	public Firma() {
-		super();
 	}
 
 	public Firma(ArrayList<Bolnica> listaBolnica) {
@@ -44,8 +42,4 @@ public class Firma {
 		
 		return new StringBuilder("Broj bolnica: ").append(listaBolnica.size()).append("; broj lekara: ").append(brojLekara).append("; broj medicinskih sestara: ").append(brojSestara).append("; broj ostalog osoblja: ").append(brojOsoblja).append(".").toString();
 	}
-	
-	
-	
-	
 }
