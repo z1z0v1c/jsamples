@@ -1,18 +1,16 @@
-/**
- * 
- */
+
 package zadatak9;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Kuca extends Nekretnina {
 
 	private double povrsinaOkucnice;
 
 	public Kuca() {
-		super();
 	}
 
 	public Kuca(String adresa, int zona, double kvadratura, Vlasnik vlasnik, double povrsinaOkucnice) {
@@ -36,6 +34,5 @@ public class Kuca extends Nekretnina {
 	@Override
 	public String toString() {
 		return new StringBuilder(super.toString()).append(", povrsina okucnice: ").append(povrsinaOkucnice).toString();
-	}
-	
+	}	
 }

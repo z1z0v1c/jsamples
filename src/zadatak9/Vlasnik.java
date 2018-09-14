@@ -1,12 +1,11 @@
-/**
- * 
- */
+
 package zadatak9;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Vlasnik {
 
 	private String imeIPrezime;
@@ -14,7 +13,6 @@ public class Vlasnik {
 	private String brojLicneKarte;
 
 	public Vlasnik() {
-		super();
 	}
 
 	public Vlasnik(String imeIPrezime, String JMBG, String brojLicneKarte) {
@@ -70,5 +68,4 @@ public class Vlasnik {
 	public String toString() {
 		return new StringBuilder("vlasnik - [ime i prezime: ").append(imeIPrezime).append(", JMBG: ").append(JMBG).append(", broj licne karte=").append(brojLicneKarte).append("]").toString();
 	}
-
 }

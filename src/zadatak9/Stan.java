@@ -1,19 +1,17 @@
-/**
- * 
- */
+
 package zadatak9;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Stan extends Nekretnina{
 
 	private double povrsinaPodruma;
 	private double povrsinaTerase;
 	
 	public Stan() {
-		super();
 	}
 	
 	public Stan(String adresa, int zona, double kvadratura, Vlasnik vlasnik, double povrsinaPodruma, double povrsinaTerase) {
@@ -46,7 +44,5 @@ public class Stan extends Nekretnina{
 	@Override
 	public String toString() {
 		return new StringBuilder(super.toString()).append(", povrsina podruma: ").append(povrsinaPodruma).append(", povrsina terase: ").append(povrsinaTerase).toString();
-	}
-	
-	
+	}	
 }

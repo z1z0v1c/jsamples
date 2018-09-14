@@ -1,12 +1,11 @@
-/**
- * 
- */
+
 package zadatak9;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public abstract class Nekretnina {
 
 	private String adresa;
@@ -15,7 +14,6 @@ public abstract class Nekretnina {
 	private Vlasnik vlasnik;
 
 	protected Nekretnina() {
-		super();
 	}
 
 	protected Nekretnina(String adresa, int zona, double kvadratura, Vlasnik vlasnik) {
