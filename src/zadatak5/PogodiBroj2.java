@@ -1,15 +1,13 @@
-/*Uraditi modifikaciju domaceg iz predhodne nedelje. Vrteti se u petlji dok ne pogodimo broj, 
- * ili budemo barem blizu (razlika manja od 5). Taj deo sa proverom pogodtka izdvojiti u zasebnu
- *  metodu, kojoj se kao argument prosledjuje broj koji tipujemo, a povratna vrednost metode je 
- *  0 - ako smo pogodili, 1 - ako smo bili blizu,2 - ako smo promasili. Na osnovu toga ostajemo
- *  ili izlazimo iz petlje i zavrsavamo program sa odgovarajucom porukom.
- */
 
 package zadatak5;
 
 /**
+ * Uraditi modifikaciju domaceg iz predhodne nedelje. Vrteti se u petlji dok ne pogodimo broj, 
+ * ili budemo barem blizu (razlika manja od 5). Taj deo sa proverom pogodtka izdvojiti u zasebnu
+ * metodu, kojoj se kao argument prosledjuje broj koji tipujemo, a povratna vrednost metode je 
+ * 0 - ako smo pogodili, 1 - ako smo bili blizu,2 - ako smo promasili. Na osnovu toga ostajemo
+ * ili izlazimo iz petlje i zavrsavamo program sa odgovarajucom porukom.
  * @author Aleksandar.Zizovic
- *
  */
 
 import java.util.Random;
@@ -46,7 +44,6 @@ public class PogodiBroj2 {
 		sc.close();
 	}
 
-	
 	private static int proveraPogotka(int unetiBroj) {		
 		//generisanje i prikaz random broja
 		Random random = new Random();
