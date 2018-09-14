@@ -1,15 +1,15 @@
-/**
- * Modifikacija digitrona od prosle nedelje. Sve operacije smestiti u posebne metode, i kada jeto potrebno
- * pozvati odgovarajucu metodu. Vrteti se u petlji, sve dok se za kod operacije ne unese nepostojeci kod
- * (default kod switch-a).
- */
 
 package zadatak6;
 
 /**
+ * Modifikacija digitrona od prosle nedelje. Sve operacije smestiti u posebne metode, i kada jeto potrebno
+ * pozvati odgovarajucu metodu. Vrteti se u petlji, sve dok se za kod operacije ne unese nepostojeci kod
+ * (default kod switch-a).
+ * 
  * @author Aleksandar.Zizovic
- *
+ * 
  */
+
 import java.util.Scanner;
 
 public class Kalkulator2 {
