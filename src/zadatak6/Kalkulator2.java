@@ -1,10 +1,10 @@
-package zadatak6;
-
 /**
  * Modifikacija digitrona od prosle nedelje. Sve operacije smestiti u posebne metode, i kada jeto potrebno
  * pozvati odgovarajucu metodu. Vrteti se u petlji, sve dok se za kod operacije ne unese nepostojeci kod
  * (default kod switch-a).
  */
+
+package zadatak6;
 
 /**
  * @author Aleksandar.Zizovic
@@ -14,47 +14,52 @@ import java.util.Scanner;
 
 public class Kalkulator2 {
 
-	public static Scanner sc = new Scanner(System.in);
-	public static boolean nastavi = true;
+	private static Scanner sc = new Scanner(System.in);
+	private static boolean nastavi = true;
+	private static final String UNOS = "Unesite %s broj: ";
+	private static final String UNOS_OPERACIJE = "Unesite zeljenu operaciju (s, o, m, d): ";
+	private static final String REZULTAT = "%s unetih brojeva je: %f";
+	private static final String POGRESAN_UNOS = "Uneta vrednost nije broj! Pokusajte ponovo!";
+	private static final String POGRESAN_UNOS_NULA = "Nije moguce deliti sa nulom!";
+	private static final String KRAJ = "Kraj programa!";
 
 	public static void main(String[] args) {
 
 		while (nastavi) {
 
-			System.out.println("Unesite prvi broj: ");
+			System.out.println(String.format(UNOS,"prvi"));
 			double broj1 = unosBroja();
 
-			System.out.println("Unesite drugi broj: ");
+			System.out.println(String.format(UNOS,"drugi"));
 			double broj2 = unosBroja();
 
 			// odabir operacije
-			System.out.println("Unesite zeljenu operaciju (s, o, m, d): ");
+			System.out.println(UNOS_OPERACIJE);
 			String operacija = sc.next();
 
 			// prikazivanje rezultata za izabranu operaciju
 			switch (operacija) {
 			case "s":
-				System.out.println(new StringBuilder("Zbir unetih brojeva je: ").append(saberi(broj1, broj2)));
+				System.out.println(String.format(REZULTAT, "Zbir", saberi(broj1,broj2)));
 				break;
 			case "o":
-				System.out.println(new StringBuilder("Razlika unetih brojeva je: ").append(oduzmi(broj1, broj2)));
+				System.out.println(String.format(REZULTAT, "Razlika" , oduzmi(broj1, broj2)));
 				break;
 			case "m":
-				System.out.println(new StringBuilder("Proizvod unetih brojeva je: ").append(pomnozi(broj1, broj2)));
+				System.out.println(String.format(REZULTAT, "Proizvod" , pomnozi(broj1, broj2)));
 				break;
 			case "d":
 				if (broj2 == 0.0) {
-					System.out.println("Nije moguce deliti sa nulom!");
+					System.out.println(POGRESAN_UNOS_NULA);
 					break;
 				} else {
-					System.out.println(new StringBuilder("Kolicnik unetih brojeva je: ").append(podeli(broj1, broj2)));
+					System.out.println(String.format(REZULTAT, "Kolicnik", podeli(broj1, broj2)));
 					break;
 				}
 			default:
-				System.out.println("Kraj programa");
+				System.out.println(KRAJ);
 				nastavi = false;
 			}
-
 		}
 		sc.close();
 	}
@@ -62,7 +67,7 @@ public class Kalkulator2 {
 	// metoda za proveru unosa broja
 	private static double unosBroja() {
 		while (!sc.hasNextDouble()) {
-			System.out.println("Pogresan unos! Pokusajte ponovo!");
+			System.out.println(POGRESAN_UNOS);
 			sc.next();
 		}
 		return sc.nextDouble();
