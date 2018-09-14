@@ -1,3 +1,6 @@
+
+package zadatak1;
+
 /**
  * Napistai program za pogadjanje slucajnog generisanog broja u opsegu od 1 do 50.
  * 
@@ -6,11 +9,7 @@
  * trazeni broj na standardni izlaz i u zavisnosti od rezultata pogadjanja ispisati odogvarajucu poruku. 
  * Ako je pogodjen tacan broj napisati: Neverovatno pogodili ste tacan broj, ako je razlika izmedju brojeva
  * 5 ili manja : Dobar pokusaj, bili ste jako blizu, i ako je razlika veca od 5 : Vise srece sledeci put.
- */
-
-package zadatak1;
-
-/**
+ * 
  * @author Aleksandar.Zizovic
  *
  */
@@ -33,7 +32,6 @@ public class PogodiBroj {
 	public static void main(String[] args) {
 
 		while (true) {
-
 			int unetiBroj;
 			
 			//unos i validacija broja
@@ -44,7 +42,6 @@ public class PogodiBroj {
 					sc.next();
 				}
 				unetiBroj = sc.nextInt();
-
 			} while ( 0 >= unetiBroj || 50 < unetiBroj);
 
 			//generisanje i prikaz random broja
