@@ -64,10 +64,10 @@ public class Student implements Comparable<Student> {
 	}
 
 	@Override
-	public int compareTo(Student o) {
-		if (this.brojPoena > o.brojPoena)
+	public int compareTo(Student student) {
+		if (this.brojPoena > student.brojPoena)
 			return 1;
-		else if (this.brojPoena == o.brojPoena)
+		else if (this.brojPoena == student.brojPoena)
 			return 0;
 		else
 			return -1;
