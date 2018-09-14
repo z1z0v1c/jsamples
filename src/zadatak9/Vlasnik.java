@@ -9,23 +9,23 @@ package zadatak9;
 public class Vlasnik {
 
 	private String imeIPrezime;
-	private String JMBG;
+	private String jmbg;
 	private String brojLicneKarte;
 
 	public Vlasnik() {
 	}
 
-	public Vlasnik(String imeIPrezime, String JMBG, String brojLicneKarte) {
+	public Vlasnik(String imeIPrezime, String jmbg, String brojLicneKarte) {
 		super();
 		if (imeIPrezime.matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
 			this.imeIPrezime = imeIPrezime;
 		else
 			this.imeIPrezime = "NN";
-		if (JMBG.matches("[0-9]+") && JMBG.length() == 13)
-			this.JMBG = JMBG;
+		if (jmbg.matches("[0-9]+") && jmbg.length() == 13)
+			this.jmbg = jmbg;
 		else
-			this.JMBG = "0000000000000";
-		if (brojLicneKarte.matches("[0-9]+") && JMBG.length() == 9)
+			this.jmbg = "0000000000000";
+		if (brojLicneKarte.matches("[0-9]+") && jmbg.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
 			this.brojLicneKarte = "000000000";
@@ -42,15 +42,15 @@ public class Vlasnik {
 			this.imeIPrezime = "NN";
 	}
 
-	public String getJMBG() {
-		return JMBG;
+	public String getJmbg() {
+		return jmbg;
 	}
 
-	public void setJMBG(String JMBG) {
-		if (JMBG.matches("[0-9]+") && JMBG.length() == 13)
-			this.JMBG = JMBG;
+	public void setJMBG(String jmbg) {
+		if (jmbg.matches("[0-9]+") && jmbg.length() == 13)
+			this.jmbg = jmbg;
 		else
-			this.JMBG = "0000000000000";
+			this.jmbg = "0000000000000";
 	}
 
 	public String getBrojLicneKarte() {
@@ -58,7 +58,7 @@ public class Vlasnik {
 	}
 
 	public void setBrojLicneKarte(String brojLicneKarte) {
-		if (brojLicneKarte.matches("[0-9]+") && JMBG.length() == 9)
+		if (brojLicneKarte.matches("[0-9]+") && jmbg.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
 			this.brojLicneKarte = "000000000";
@@ -66,6 +66,6 @@ public class Vlasnik {
 
 	@Override
 	public String toString() {
-		return new StringBuilder("vlasnik - [ime i prezime: ").append(imeIPrezime).append(", JMBG: ").append(JMBG).append(", broj licne karte=").append(brojLicneKarte).append("]").toString();
+		return new StringBuilder("vlasnik - [ime i prezime: ").append(imeIPrezime).append(", JMBG: ").append(jmbg).append(", broj licne karte=").append(brojLicneKarte).append("]").toString();
 	}
 }
