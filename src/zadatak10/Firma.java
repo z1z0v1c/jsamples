@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package zadatak10;
 
 import java.util.ArrayList;
@@ -9,13 +7,13 @@ import java.util.ArrayList;
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Firma {
 	
 	private double kapital;
 	private ArrayList<Proizvod> listaProizvoda;
 	
 	public Firma(double kapital, ArrayList<Proizvod> listaProizvoda) {
-		super();
 		this.kapital = kapital;
 		this.listaProizvoda = listaProizvoda;
 	}
@@ -34,6 +32,5 @@ public class Firma {
 			System.out.println("Nema dovoljno sredstava");
 			System.out.println(new StringBuilder("Lista proizvoda: ").append(this.listaProizvoda));
 		}
-	}
-	
+	}	
 }

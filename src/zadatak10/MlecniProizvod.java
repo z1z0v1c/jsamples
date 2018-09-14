@@ -1,18 +1,17 @@
-/**
- * 
- */
+
 package zadatak10;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public class MlecniProizvod extends Proizvod {
 
 	private String porekloMleka;
+	private static final double PDV = 1.2;
 
 	public MlecniProizvod() {
-		super();
 	}
 
 	public MlecniProizvod(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String porekloMleka) {
@@ -30,12 +29,11 @@ public class MlecniProizvod extends Proizvod {
 	
 	@Override
 	public double getUkupnaCenaProizvoda() {
-		return this.getCenaProizvoda() * 1.2;
+		return this.getCenaProizvoda() * PDV;
 	}
 
 	@Override
 	public String toString() {
 		return new StringBuilder(super.toString()).append(", poreklo mleka: ").append(porekloMleka).append(". UKUPNA CENA PROIZVODA: ").append(getUkupnaCenaProizvoda()).toString();
-	}
-	
+	}	
 }

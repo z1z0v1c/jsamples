@@ -1,3 +1,8 @@
+
+package zadatak10;
+
+import java.util.ArrayList;
+
 /**
  * Napisati program koji opisuje sledeci scenario:
  * Firma se bavi preprodajom prehrambenih proizvoda. Proizvode razlikujemo po sledecim kategorijama proizvoda:
@@ -10,20 +15,12 @@
  * O sokovima cuvamo od cega je sok.
  * Kod mesa cuvamo od koje zivotinje je meso.
  * Kod cene mlecnih proizvoda i sokova PDV je 20%, dok je za meso i kafu PDV na cenu 8%.
- */
-package zadatak10;
-
-import java.util.ArrayList;
-
-/**
+ * 
  * @author Aleksandar.Zizovic
- *
  */
+
 public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		
 		Proizvod mlecniProizvod1 = new MlecniProizvod("Kisela pavlaka", 50, "20.2.2019.", "kravlje mleko");
@@ -52,8 +49,10 @@ public class Main {
 		
 		Firma firma2 = new Firma(700, lista2);
 		
+		//prva opcija - nema dovoljno sredstava
 		firma1.porudzbina();
+		
+		//druga opcija - kupovina izvrsena
 		firma2.porudzbina();
 	}
-
 }

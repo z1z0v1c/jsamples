@@ -1,12 +1,11 @@
-/**
- * 
- */
+
 package zadatak10;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public abstract class Proizvod {
 
 	private String imeProizvoda;
@@ -15,7 +14,6 @@ public abstract class Proizvod {
 	
 	
 	protected Proizvod() {
-		super();
 	}
 
 	protected Proizvod(String imeProizvoda, double cenaProizvoda, String rokTrajanja) {

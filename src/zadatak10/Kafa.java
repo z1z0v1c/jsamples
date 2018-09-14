@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package zadatak10;
 
 /**
@@ -10,9 +8,9 @@ package zadatak10;
 public class Kafa extends Proizvod {
 	
 	private boolean samlevena;
+	private static final double PDV = 1.08;
 
 	public Kafa() {
-		super();
 	}
 
 	public Kafa(String imeProizvoda, double cenaProizvoda, String rokTrajanja, boolean samlevena) {
@@ -30,14 +28,11 @@ public class Kafa extends Proizvod {
 
 	@Override
 	public double getUkupnaCenaProizvoda() {
-		return this.getCenaProizvoda() * 1.08;
+		return this.getCenaProizvoda() * PDV;
 	}
 
 	@Override
 	public String toString() {
-		return new StringBuilder(super.toString()).append(", samlevena: ").append(samlevena).append(". UKUPNA CENA PROIZVODA: ").append(getUkupnaCenaProizvoda()).toString();
+		return new StringBuilder(super.toString()).append(", tip kafe: ").append((samlevena) ? "samlevena" : "u zrnu").append(". UKUPNA CENA PROIZVODA: ").append(getUkupnaCenaProizvoda()).toString();
 	}
-	
-	
-
 }

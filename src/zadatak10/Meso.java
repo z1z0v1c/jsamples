@@ -1,15 +1,15 @@
-/**
- * 
- */
+
 package zadatak10;
 
 /**
  * @author Aleksandar.Zizovic
  *
  */
+
 public class Meso extends Proizvod{
 
 	private String zivotinjskoPoreklo;
+	private static final double PDV = 1.08;
 
 	public Meso() {
 		super();
@@ -35,6 +35,6 @@ public class Meso extends Proizvod{
 
 	@Override
 	public double getUkupnaCenaProizvoda() {
-		return this.getCenaProizvoda() * 1.08;
+		return this.getCenaProizvoda() * PDV;
 	}
 }
