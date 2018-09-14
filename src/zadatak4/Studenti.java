@@ -1,14 +1,13 @@
-/**
- * Koriscenjem for petlje pronaci i ispisati ime studenta sa najvecim brojem poena na testu. Prvo se unosi
- * broj studenata n, posle se n puta obilazi for petlja i unose ime i broj poena studenta. Zapamti onog sa
- * najvecim brojem poena.
- */
 
 package zadatak4;
 
 import java.util.Scanner;
 
-/**
+/** 
+ * Koriscenjem for petlje pronaci i ispisati ime studenta sa najvecim brojem poena na testu. Prvo se unosi
+ * broj studenata n, posle se n puta obilazi for petlja i unose ime i broj poena studenta. Zapamti onog sa
+ * najvecim brojem poena.
+ *
  * @author Aleksandar.Zizovic
  *
  */
@@ -28,7 +27,6 @@ public class Studenti {
 	static final String NASTAVAK = "Da li zelite da nastavite?";
 	static final String KRAJ = "Kraj programa";
 	
-
 	public static void main(String[] args) {
 
 		while (true) {
@@ -87,7 +85,6 @@ public class Studenti {
 			return broj;
 	}
 	
-
 	// validacija unetiog imena i prezimena
 	private static String unosImena() {
 		String s = "";
