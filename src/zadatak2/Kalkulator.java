@@ -1,18 +1,17 @@
+
+package zadatak2;
+
 /**
  * Napisati program koji ce predstavljati jednostavan digitron. Program treba da radi tako sto korisnik 
  * unese dva cela broja, zatim kod operacije koji zeli da izvrsi ('s' - sabiranje, 'o' - oduzimanje, 
  * 'm' - mnozenje, 'd' - deljenje). Kao rezultat se ocekuje ispisivanje rezultata te operacije nad unetim 
  * operandima.
- */
-
-package zadatak2;
-
-/**
+ * 
  * @author Aleksandar.Zizovic
  *
  */
 
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class Kalkulator {
 
@@ -70,7 +69,6 @@ public class Kalkulator {
 				System.out.println(KRAJ);
 				break;				
 			}
-
 		}
 		sc.close();
 	}
