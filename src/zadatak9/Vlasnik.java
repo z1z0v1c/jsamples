@@ -7,17 +7,20 @@ package zadatak9;
  */
 
 public class Vlasnik {
+	
+	private static final String REGEX = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
 
 	private String imeIPrezime;
 	private String jmbg;
 	private String brojLicneKarte;
+	
 
 	public Vlasnik() {
 	}
 
 	public Vlasnik(String imeIPrezime, String jmbg, String brojLicneKarte) {
 		super();
-		if (imeIPrezime.matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+		if (imeIPrezime.matches(REGEX))
 			this.imeIPrezime = imeIPrezime;
 		else
 			this.imeIPrezime = "NN";
@@ -25,7 +28,7 @@ public class Vlasnik {
 			this.jmbg = jmbg;
 		else
 			this.jmbg = "0000000000000";
-		if (brojLicneKarte.matches("[0-9]+") && jmbg.length() == 9)
+		if (brojLicneKarte.matches("[0-9]+") && brojLicneKarte.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
 			this.brojLicneKarte = "000000000";
@@ -36,7 +39,7 @@ public class Vlasnik {
 	}
 
 	public void setImeIPrezime(String imeIPrezime) {
-		if (imeIPrezime.matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+		if (imeIPrezime.matches(REGEX))
 			this.imeIPrezime = imeIPrezime;
 		else
 			this.imeIPrezime = "NN";
@@ -58,7 +61,7 @@ public class Vlasnik {
 	}
 
 	public void setBrojLicneKarte(String brojLicneKarte) {
-		if (brojLicneKarte.matches("[0-9]+") && jmbg.length() == 9)
+		if (brojLicneKarte.matches("[0-9]+") && brojLicneKarte.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
 			this.brojLicneKarte = "000000000";
