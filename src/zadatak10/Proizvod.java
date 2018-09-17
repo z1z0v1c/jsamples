@@ -13,10 +13,10 @@ public abstract class Proizvod {
 	private String rokTrajanja;
 	
 	
-	protected Proizvod() {
+	Proizvod() {
 	}
 
-	protected Proizvod(String imeProizvoda, double cenaProizvoda, String rokTrajanja) {
+	Proizvod(String imeProizvoda, double cenaProizvoda, String rokTrajanja) {
 		super();
 		this.imeProizvoda = imeProizvoda;
 		this.cenaProizvoda = cenaProizvoda;
@@ -49,7 +49,7 @@ public abstract class Proizvod {
 
 	@Override
 	public String toString() {
-		return new StringBuilder(this.getClass().getSimpleName()).append(" - ime proizvoda: ").append(imeProizvoda).append(", cena proizvoda: ").append(cenaProizvoda).append(", rok trajanja: ").append(rokTrajanja).toString();
+		return new StringBuilder("\n").append(this.getClass().getSimpleName()).append(" - ime proizvoda: ").append(imeProizvoda).append(", cena proizvoda: ").append(cenaProizvoda).append(", rok trajanja: ").append(rokTrajanja).toString();
 	}
 	
 	public abstract double getUkupnaCenaProizvoda();

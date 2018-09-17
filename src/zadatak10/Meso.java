@@ -11,11 +11,10 @@ public class Meso extends Proizvod{
 	private String zivotinjskoPoreklo;
 	private static final double PDV = 1.08;
 
-	public Meso() {
-		super();
+	Meso() {
 	}
 
-	public Meso(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String zivotinjskoPoreklo) {
+	Meso(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String zivotinjskoPoreklo) {
 		super(imeProizvoda, cenaProizvoda, rokTrajanja);
 		this.zivotinjskoPoreklo = zivotinjskoPoreklo;
 	}

@@ -2,6 +2,7 @@
 package zadatak10;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Napisati program koji opisuje sledeci scenario:
@@ -28,7 +29,7 @@ public class Main {
 		Proizvod sok1 = new Sok("Next", 130, "17.5.2019.", "pomorandza");
 		Proizvod meso1 = new Meso("Belo meso", 400, "12.12.2018", "pilece meso");
 		
-		ArrayList<Proizvod> lista1 = new ArrayList<>();
+		List<Proizvod> lista1 = new ArrayList<>();
 		lista1.add(mlecniProizvod1);
 		lista1.add(kafa1);
 		lista1.add(sok1);
@@ -41,7 +42,7 @@ public class Main {
 		Proizvod sok2 = new Sok("Next", 130, "17.5.2019.", "pomorandza");
 		Proizvod meso2 = new Meso("Belo meso", 400, "12.12.2018", "pilece meso");
 		
-		ArrayList<Proizvod> lista2 = new ArrayList<>();
+		List<Proizvod> lista2 = new ArrayList<>();
 		lista1.add(mlecniProizvod2);
 		lista1.add(kafa2);
 		lista1.add(sok2);

@@ -11,10 +11,10 @@ public class Sok extends Proizvod{
 	private String sastav;
 	private static final double PDV = 1.2;
 	
-	public Sok() {
+	Sok() {
 	}
 
-	public Sok(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String sastav) {
+	Sok(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String sastav) {
 		super(imeProizvoda, cenaProizvoda, rokTrajanja);
 		this.sastav = sastav;
 	}

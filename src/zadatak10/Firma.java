@@ -1,7 +1,7 @@
 
 package zadatak10;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Aleksandar.Zizovic
@@ -11,14 +11,14 @@ import java.util.ArrayList;
 public class Firma {
 	
 	private double kapital;
-	private ArrayList<Proizvod> listaProizvoda;
+	private List<Proizvod> listaProizvoda;
 	
-	public Firma(double kapital, ArrayList<Proizvod> listaProizvoda) {
+	Firma(double kapital, List<Proizvod> listaProizvoda) {
 		this.kapital = kapital;
 		this.listaProizvoda = listaProizvoda;
 	}
 	
-	public void porudzbina() {
+	void porudzbina() {
 		int ukupnaCenaListe = 0;
 		for (Proizvod p : this.listaProizvoda) {
 			ukupnaCenaListe += p.getUkupnaCenaProizvoda();
@@ -27,10 +27,10 @@ public class Firma {
 			System.out.println("Kupljeno");
 			this.listaProizvoda.clear();
 			this.kapital -= ukupnaCenaListe;
-			System.out.println(new StringBuilder("Lista proizvoda: ").append(this.listaProizvoda));
+			System.out.println(new StringBuilder("LISTA PROIZVODA: \n").append(this.listaProizvoda).append("\n").toString());
 		}else {
 			System.out.println("Nema dovoljno sredstava");
-			System.out.println(new StringBuilder("Lista proizvoda: ").append(this.listaProizvoda));
+			System.out.println(new StringBuilder("LISTA PROIZVODA: \n").append(this.listaProizvoda).append("\n").toString());
 		}
 	}	
 }

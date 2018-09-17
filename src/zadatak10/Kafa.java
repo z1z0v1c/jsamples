@@ -10,10 +10,10 @@ public class Kafa extends Proizvod {
 	private boolean samlevena;
 	private static final double PDV = 1.08;
 
-	public Kafa() {
+	Kafa() {
 	}
 
-	public Kafa(String imeProizvoda, double cenaProizvoda, String rokTrajanja, boolean samlevena) {
+	Kafa(String imeProizvoda, double cenaProizvoda, String rokTrajanja, boolean samlevena) {
 		super(imeProizvoda, cenaProizvoda, rokTrajanja);
 		this.samlevena = samlevena;
 	}

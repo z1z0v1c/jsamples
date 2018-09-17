@@ -11,10 +11,10 @@ public class MlecniProizvod extends Proizvod {
 	private String porekloMleka;
 	private static final double PDV = 1.2;
 
-	public MlecniProizvod() {
+	MlecniProizvod() {
 	}
 
-	public MlecniProizvod(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String porekloMleka) {
+	MlecniProizvod(String imeProizvoda, double cenaProizvoda, String rokTrajanja, String porekloMleka) {
 		super(imeProizvoda, cenaProizvoda, rokTrajanja);
 		this.porekloMleka = porekloMleka;
 	}
