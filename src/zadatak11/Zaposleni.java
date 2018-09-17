@@ -15,12 +15,11 @@ public abstract class Zaposleni {
 	private String datumRodjenja;
 	
 	
-	protected Zaposleni() {
+	Zaposleni() {
 	}
 
 
-	protected Zaposleni(String ime, String prezime, String adresa, String telefon, String datumRodjenja) {
-		super();
+	Zaposleni(String ime, String prezime, String adresa, String telefon, String datumRodjenja) {
 		this.ime = ime;
 		this.prezime = prezime;
 		this.adresa = adresa;

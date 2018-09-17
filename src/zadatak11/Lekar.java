@@ -10,10 +10,10 @@ public class Lekar extends Zaposleni{
 
 	private String fakultet;
 
-	public Lekar() {
+	Lekar() {
 	}
 
-	public Lekar(String ime, String prezime, String adresa, String telefon, String datumRodjenja, String fakultet) {
+	Lekar(String ime, String prezime, String adresa, String telefon, String datumRodjenja, String fakultet) {
 		super(ime, prezime, adresa, telefon, datumRodjenja);
 		this.fakultet = fakultet;
 	}

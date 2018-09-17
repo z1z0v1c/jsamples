@@ -2,15 +2,16 @@
 package zadatak11;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Napisati program koji opisuje sledeci scenario:
  * 
- * Firma posedujeniz privatnih bolnica. Svaka bolnica ima svoje zaposlene. Zaposleni mogu biti:
+ * Firma poseduje niz privatnih bolnica. Svaka bolnica ima svoje zaposlene. Zaposleni mogu biti:
  * 		- Lekari
  * 		- Osoblje
  * 		- Medicinske sestre
- * Bolnica sadrzi informacije o nazivu, direktoru i broju zaposlenih. Podaci koji se cuvaju o lekaru su :
+ * Bolnica sadrzi informacije o nazivu, direktoru i broju zaposlenih. Podaci koji se cuvaju o lekaru su:
  * 		- Fakultet
  * 		- Ime
  * 		- Prezime
@@ -33,14 +34,14 @@ public class Main {
 		MedicinskaSestra sestra = new MedicinskaSestra("Ivana", "Ivanovic", "Igmanska 12", "011333444", "7.3.1983", 1);
 		Lekar lekar = new Lekar("Dejan", "Jovanovic", "Dimitrija Tucovica 56", "011000111", "28.10.1971", "Medicinski fakultet");
 		
-		ArrayList<Lekar> listaLekara = new ArrayList<>();
+		List<Lekar> listaLekara = new ArrayList<>();
 		listaLekara.add(lekar);
 		
-		ArrayList<MedicinskaSestra> listaSestara = new ArrayList<>();
+		List<MedicinskaSestra> listaSestara = new ArrayList<>();
 		listaSestara.add(sestra);
 		listaSestara.add(sestra);
 		
-		ArrayList<OstaloOsoblje> listaOsoblja = new ArrayList<>();
+		List<OstaloOsoblje> listaOsoblja = new ArrayList<>();
 		listaOsoblja.add(zaposleni);
 		listaOsoblja.add(zaposleni);
 		listaOsoblja.add(zaposleni);
@@ -52,7 +53,7 @@ public class Main {
 		bolnica.setListaSestara(listaSestara);
 		bolnica.setListaOsoblja(listaOsoblja);
 		
-		ArrayList<Bolnica> listaBolnica = new ArrayList<>();
+		List<Bolnica> listaBolnica = new ArrayList<>();
 		listaBolnica.add(bolnica);
 		listaBolnica.add(bolnica);
 		listaBolnica.add(bolnica);

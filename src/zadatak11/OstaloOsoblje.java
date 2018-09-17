@@ -8,10 +8,10 @@ package zadatak11;
 
 public class OstaloOsoblje extends Zaposleni {
 
-	public OstaloOsoblje() {
+	OstaloOsoblje() {
 	}
 
-	public OstaloOsoblje(String ime, String prezime, String adresa, String telefon, String datumRodjenja) {
+	OstaloOsoblje(String ime, String prezime, String adresa, String telefon, String datumRodjenja) {
 		super(ime, prezime, adresa, telefon, datumRodjenja);
 	}	
 }

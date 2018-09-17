@@ -1,7 +1,7 @@
 
 package zadatak11;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Aleksandar.Zizovic
@@ -10,21 +10,20 @@ import java.util.ArrayList;
 
 public class Firma {
 
-	private ArrayList<Bolnica> listaBolnica;
+	private List<Bolnica> listaBolnica;
 
-	public Firma() {
+	Firma() {
 	}
 
-	public Firma(ArrayList<Bolnica> listaBolnica) {
-		super();
+	Firma(List<Bolnica> listaBolnica) {
 		this.listaBolnica = listaBolnica;
 	}
 
-	public ArrayList<Bolnica> getListaBolnica() {
+	public List<Bolnica> getListaBolnica() {
 		return listaBolnica;
 	}
 
-	public void setListaBolnica(ArrayList<Bolnica> listaBolnica) {
+	public void setListaBolnica(List<Bolnica> listaBolnica) {
 		this.listaBolnica = listaBolnica;
 	}
 
@@ -40,6 +39,6 @@ public class Firma {
 			brojOsoblja += b.getListaOsoblja().size();
 		}
 		
-		return new StringBuilder("Broj bolnica: ").append(listaBolnica.size()).append("; broj lekara: ").append(brojLekara).append("; broj medicinskih sestara: ").append(brojSestara).append("; broj ostalog osoblja: ").append(brojOsoblja).append(".").toString();
+		return new StringBuilder("Broj bolnica: ").append(listaBolnica.size()).append("\nBroj lekara: ").append(brojLekara).append("\nBroj medicinskih sestara: ").append(brojSestara).append("\nBroj ostalog osoblja: ").append(brojOsoblja).toString();
 	}
 }

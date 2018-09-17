@@ -1,7 +1,7 @@
 
 package zadatak11;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Aleksandar.Zizovic
@@ -12,15 +12,15 @@ public class Bolnica {
 
 	private String naziv;
 	private Zaposleni direktor;
-	private ArrayList<OstaloOsoblje> listaOsoblja;
-	private ArrayList<Lekar> listaLekara;
-	private ArrayList<MedicinskaSestra> listaSestara;
+	private List<OstaloOsoblje> listaOsoblja;
+	private List<Lekar> listaLekara;
+	private List<MedicinskaSestra> listaSestara;
 	
-	public Bolnica() {
+	Bolnica() {
 	}
 
-	public Bolnica(String naziv, Zaposleni direktor, ArrayList<OstaloOsoblje> listaOsoblja,
-			ArrayList<Lekar> listaLekara, ArrayList<MedicinskaSestra> listaSestara) {
+	Bolnica(String naziv, Zaposleni direktor, List<OstaloOsoblje> listaOsoblja,
+			List<Lekar> listaLekara, List<MedicinskaSestra> listaSestara) {
 		this.naziv = naziv;
 		this.direktor = direktor;
 		this.listaOsoblja = listaOsoblja;
@@ -44,27 +44,27 @@ public class Bolnica {
 		this.direktor = direktor;
 	}
 
-	public ArrayList<OstaloOsoblje> getListaOsoblja() {
+	public List<OstaloOsoblje> getListaOsoblja() {
 		return listaOsoblja;
 	}
 
-	public void setListaOsoblja(ArrayList<OstaloOsoblje> listaOsoblja) {
+	public void setListaOsoblja(List<OstaloOsoblje> listaOsoblja) {
 		this.listaOsoblja = listaOsoblja;
 	}
 
-	public ArrayList<Lekar> getListaLekara() {
+	public List<Lekar> getListaLekara() {
 		return listaLekara;
 	}
 
-	public void setListaLekara(ArrayList<Lekar> listaLekara) {
+	public void setListaLekara(List<Lekar> listaLekara) {
 		this.listaLekara = listaLekara;
 	}
 
-	public ArrayList<MedicinskaSestra> getListaSestara() {
+	public List<MedicinskaSestra> getListaSestara() {
 		return listaSestara;
 	}
 
-	public void setListaSestara(ArrayList<MedicinskaSestra> listaSestara) {
+	public void setListaSestara(List<MedicinskaSestra> listaSestara) {
 		this.listaSestara = listaSestara;
 	}	
 }
