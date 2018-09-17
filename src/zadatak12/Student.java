@@ -13,12 +13,10 @@ public class Student implements Comparable<Student> {
 	private String prezime;
 	private int brojPoena;
 
-	public Student() {
-		super();
+	Student() {
 	}
 
-	public Student(String ime, String prezime, int brojPoena) {
-		super();
+	Student(String ime, String prezime, int brojPoena) {
 		this.ime = ime;
 		this.prezime = prezime;
 		this.brojPoena = brojPoena;
@@ -75,6 +73,7 @@ public class Student implements Comparable<Student> {
 
 	@Override
 	public String toString() {
-		return new StringBuilder(this.ime).append(" ").append(this.prezime).append(" ").append(this.brojPoena).append(" ").append(this.getOcena()).append(" \n").toString();
+		return new StringBuilder(this.ime).append(" ").append(this.prezime).append(" ").append(this.brojPoena)
+				.append(" ").append(this.getOcena()).append(" \n").toString();
 	}
 }
