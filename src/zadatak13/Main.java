@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /** 
@@ -16,13 +17,12 @@ import java.util.Scanner;
 *
 */
 public class Main {
-	
-	private static Scanner ulaz;
 
 	public static void main(String[] args) {
 
+		Scanner ulaz;
 		File fajl = new File("poeni.txt");
-		ArrayList<Student> studenti = new ArrayList<>();
+		List<Student> studenti = new ArrayList<>();
 		
 		//citanje iz fajla
 		try {

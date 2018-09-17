@@ -14,11 +14,9 @@ public class Student implements Comparable<Student> {
 	private int brojPoena;
 
 	public Student() {
-		super();
 	}
 
 	public Student(String ime, String prezime, int brojPoena) {
-		super();
 		this.ime = ime;
 		this.prezime = prezime;
 		this.brojPoena = brojPoena;
@@ -65,16 +63,12 @@ public class Student implements Comparable<Student> {
 
 	@Override
 	public int compareTo(Student student) {
-		if (this.brojPoena > student.brojPoena)
-			return 1;
-		else if (this.brojPoena == student.brojPoena)
-			return 0;
-		else
-			return -1;
+		return (this.brojPoena > student.brojPoena) ? 1 : (this.brojPoena == student.brojPoena) ? 0 : -1;
 	}
 
 	@Override
 	public String toString() {
-		return new StringBuilder(this.ime).append(" ").append(this.prezime).append(" ").append(this.brojPoena).append(" ").append(this.getOcena()).append(" \n").toString();
+		return new StringBuilder(this.ime).append(" ").append(this.prezime).append(" ").append(this.brojPoena)
+				.append(" ").append(this.getOcena()).append(" \n").toString();
 	}
 }
