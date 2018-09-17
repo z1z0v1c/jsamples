@@ -14,33 +14,33 @@ import java.util.Scanner;
 
 public class Studenti {
 
-	static Scanner sc = new Scanner(System.in);
-	static String imeStudenta;
-	static final String BR_STUDENATA = "Unesite broj studenata:";
-	static final String MAX_BR_POENA = "Student sa najvecim brojem poena: ";
-	static final String BR_POENA = "Broj poena koji je student ostvario: ";
-	static final String POGRESAN_UNOS = "Pogresan unos! Pokusajte ponovo!";
-	static final String POGRESAN_UNOS_IME = "Ime mora da ima vise od jednog karaktera i ne sme da sadrzi brojeve! Pokusajte ponovo!";
-	static final String POGRESAN_UNOS_BR_POENA = "Broj poena mora da bude pozitivan! Pokusajte ponovo!";
-	static final String POGRESAN_UNOS_BR_STUDENATA = "Broj studenata mora da bude veci od 0! Pokusajte ponovo!";
-	static final String REGEX = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
-	static final String NASTAVAK = "Da li zelite da nastavite?";
-	static final String KRAJ = "Kraj programa";
+	private static Scanner ulaz = new Scanner(System.in);
+	private static String imeStudenta;
+	private static final String BR_STUDENATA = "Unesite broj studenata:";
+	private static final String MAX_BR_POENA = "Student sa najvecim brojem poena: ";
+	private static final String BR_POENA = "Broj poena koji je student ostvario: ";
+	private static final String POGRESAN_UNOS = "Pogresan unos! Pokusajte ponovo!";
+	private static final String POGRESAN_UNOS_IME = "Ime mora da ima vise od jednog karaktera i ne sme da sadrzi brojeve! Pokusajte ponovo!";
+	private static final String POGRESAN_UNOS_BR_POENA = "Broj poena mora da bude pozitivan! Pokusajte ponovo!";
+	private static final String POGRESAN_UNOS_BR_STUDENATA = "Broj studenata mora da bude veci od 0! Pokusajte ponovo!";
+	private static final String REGEX = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
+	private static final String NASTAVAK = "Da li zelite da nastavite?";
+	private static final String KRAJ = "Kraj programa";
 	
 	public static void main(String[] args) {
 
 		while (true) {
 			System.out.println(BR_STUDENATA);
-			int brojStudenata = unosBrojaStudenata();;
+			int brojStudenata = unosBrojaStudenata();
 			int maxPoeni = 0;
 			for (int i = 1; i <= brojStudenata; i++) {
 				System.out.println(new StringBuilder("Unesite ime ").append(i).append(". studenta: "));
-				String s = unosImena();
+				String ime = unosImena();
 				System.out.println(new StringBuilder("Unesite broj poena ").append(i).append(". studenta: "));
 				int pomocnaVrednost = unosBrojaPoena();
 				if (pomocnaVrednost > maxPoeni) {
 					maxPoeni = pomocnaVrednost;
-					imeStudenta = s;
+					imeStudenta = ime;
 				}
 			}
 
@@ -53,16 +53,16 @@ public class Studenti {
 				break;
 			}
 		}
-		sc.close();
+		ulaz.close();
 	}
 	
 	//provera da li je unet broj
 	private static int unosBroja() {
-		while (!sc.hasNextInt()) {
+		while (!ulaz.hasNextInt()) {
 			System.out.println(POGRESAN_UNOS);
-			sc.next();
+			ulaz.next();
 		}
-		return sc.nextInt();
+		return ulaz.nextInt();
 	}
 
 	// validacija unetog broja studenata
@@ -87,23 +87,23 @@ public class Studenti {
 	
 	// validacija unetiog imena i prezimena
 	private static String unosImena() {
-		String s = "";
-		while (!s.matches(REGEX)) {
-			if (!s.equals("")) {
+		String ime = "";
+		while (!ime.matches(REGEX)) {
+			if (!ime.equals("")) {
 				System.out.println(POGRESAN_UNOS_IME);
 			}
-			s = sc.nextLine();
+			ime = ulaz.nextLine();
 		}
-		return s;
+		return ime;
 	}
 
 	// validacija odgovora za izlaz iz programa
 	private static String unosKraj() {
-		String s = sc.next();
-		while (!(s.equalsIgnoreCase("da") || s.equalsIgnoreCase("ne"))) {
+		String odgovor = ulaz.next();
+		while (!(odgovor.equalsIgnoreCase("da") || odgovor.equalsIgnoreCase("ne"))) {
 			System.out.println(POGRESAN_UNOS);
-			s = sc.next();
+			odgovor = ulaz.next();
 		}
-		return s;
+		return odgovor;
 	}
 }
