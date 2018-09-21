@@ -11,6 +11,7 @@ public class Vlasnik {
 	private String imeIPrezime;
 	private String jmbg;
 	private String brojLicneKarte;
+
 	private static final String REGEX1 = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
 	private static final String REGEX2 = "[0-9]+";
 	private static final String POGRESNO_IME = "Pogresan unos! Niste uneli ispravno ime i prezime";
@@ -20,16 +21,18 @@ public class Vlasnik {
 	public Vlasnik() {
 	}
 
-	public Vlasnik(String imeIPrezime, String jmbg, String brojLicneKarte) throws IllegalArgumentException {
+	public Vlasnik(String imeIPrezime, String jmbg, String brojLicneKarte) {
 		if (imeIPrezime.matches(REGEX1))
 			this.imeIPrezime = imeIPrezime;
 		else
 			throw new IllegalArgumentException(POGRESNO_IME);
+
 		if (jmbg.matches(REGEX2) && jmbg.length() == 13)
 			this.jmbg = jmbg;
 		else
 			throw new IllegalArgumentException(POGRESAN_JMBG);
-		if (brojLicneKarte.matches(REGEX2) && brojLicneKarte.length() == 9)
+
+		if (brojLicneKarte.matches("[0-9]+") && brojLicneKarte.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
 			throw new IllegalArgumentException(POGRESAN_BR_LK);
