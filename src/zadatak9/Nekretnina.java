@@ -12,21 +12,24 @@ public abstract class Nekretnina {
 	private int zona;
 	private double kvadratura;
 	private Vlasnik vlasnik;
+	private static final String POGRESAN_UNOS_ZONA = "Pogresan unos! Niste uneli ispravan broj zone";
+	private static final String POGRESAN_UNOS_KVADRATURA = "Pogresan unos! Niste uneli ispravnu kvadraturu";
 
 	protected Nekretnina() {
 	}
 
 	protected Nekretnina(String adresa, int zona, double kvadratura, Vlasnik vlasnik) {
-		super();
 		this.adresa = adresa;
 		if (zona > 0 && zona < 5)
 			this.zona = zona;
 		else
-			this.zona = 4;
+			throw new IllegalArgumentException(POGRESAN_UNOS_ZONA);
+		;
 		if (kvadratura > 0.0)
 			this.kvadratura = kvadratura;
 		else
-			this.kvadratura = 0;
+			throw new IllegalArgumentException(POGRESAN_UNOS_KVADRATURA);
+		;
 		this.vlasnik = vlasnik;
 	}
 
@@ -46,7 +49,8 @@ public abstract class Nekretnina {
 		if (zona > 0 && zona < 5)
 			this.zona = zona;
 		else
-			this.zona = 4;
+			throw new IllegalArgumentException(POGRESAN_UNOS_ZONA);
+		;
 	}
 
 	public double getKvadratura() {
@@ -57,7 +61,8 @@ public abstract class Nekretnina {
 		if (kvadratura > 0.0)
 			this.kvadratura = kvadratura;
 		else
-			this.kvadratura = 0;
+			throw new IllegalArgumentException(POGRESAN_UNOS_KVADRATURA);
+		;
 	}
 
 	public Vlasnik getVlasnik() {
@@ -70,7 +75,9 @@ public abstract class Nekretnina {
 
 	@Override
 	public String toString() {
-		return new StringBuilder(this.getClass().getSimpleName()).append(" - adresa: ").append(adresa).append(", zona: ").append(zona).append(", kvadratura: ").append(kvadratura).append(" ").append(vlasnik.toString()).toString();
+		return new StringBuilder(this.getClass().getSimpleName()).append(" - adresa: ").append(adresa)
+				.append(", zona: ").append(zona).append(", kvadratura: ").append(kvadratura).append(" ")
+				.append(vlasnik.toString()).toString();
 	}
 
 	public abstract double getCena();

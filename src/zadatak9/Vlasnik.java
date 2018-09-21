@@ -11,24 +11,28 @@ public class Vlasnik {
 	private String imeIPrezime;
 	private String jmbg;
 	private String brojLicneKarte;
+	private static final String REGEX1 = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
+	private static final String REGEX2 = "[0-9]+";
+	private static final String POGRESNO_IME = "Pogresan unos! Niste uneli ispravno ime i prezime";
+	private static final String POGRESAN_JMBG = "Pogresan unos! Niste uneli ispravno JMBG";
+	private static final String POGRESAN_BR_LK = "Pogresan unos! Niste uneli ispravno broj licne karte";
 
 	public Vlasnik() {
 	}
 
-	public Vlasnik(String imeIPrezime, String jmbg, String brojLicneKarte) {
-		super();
-		if (imeIPrezime.matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+	public Vlasnik(String imeIPrezime, String jmbg, String brojLicneKarte) throws IllegalArgumentException {
+		if (imeIPrezime.matches(REGEX1))
 			this.imeIPrezime = imeIPrezime;
 		else
-			this.imeIPrezime = "NN";
-		if (jmbg.matches("[0-9]+") && jmbg.length() == 13)
+			throw new IllegalArgumentException(POGRESNO_IME);
+		if (jmbg.matches(REGEX2) && jmbg.length() == 13)
 			this.jmbg = jmbg;
 		else
-			this.jmbg = "0000000000000";
-		if (brojLicneKarte.matches("[0-9]+") && jmbg.length() == 9)
+			throw new IllegalArgumentException(POGRESAN_JMBG);
+		if (brojLicneKarte.matches(REGEX2) && brojLicneKarte.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
-			this.brojLicneKarte = "000000000";
+			throw new IllegalArgumentException(POGRESAN_BR_LK);
 	}
 
 	public String getImeIPrezime() {
@@ -36,10 +40,10 @@ public class Vlasnik {
 	}
 
 	public void setImeIPrezime(String imeIPrezime) {
-		if (imeIPrezime.matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+		if (imeIPrezime.matches(REGEX1))
 			this.imeIPrezime = imeIPrezime;
 		else
-			this.imeIPrezime = "NN";
+			throw new IllegalArgumentException(POGRESNO_IME);
 	}
 
 	public String getJmbg() {
@@ -47,10 +51,10 @@ public class Vlasnik {
 	}
 
 	public void setJMBG(String jmbg) {
-		if (jmbg.matches("[0-9]+") && jmbg.length() == 13)
+		if (jmbg.matches(REGEX2) && jmbg.length() == 13)
 			this.jmbg = jmbg;
 		else
-			this.jmbg = "0000000000000";
+			throw new IllegalArgumentException(POGRESAN_JMBG);
 	}
 
 	public String getBrojLicneKarte() {
@@ -58,14 +62,15 @@ public class Vlasnik {
 	}
 
 	public void setBrojLicneKarte(String brojLicneKarte) {
-		if (brojLicneKarte.matches("[0-9]+") && jmbg.length() == 9)
+		if (brojLicneKarte.matches(REGEX2) && brojLicneKarte.length() == 9)
 			this.brojLicneKarte = brojLicneKarte;
 		else
-			this.brojLicneKarte = "000000000";
+			throw new IllegalArgumentException(POGRESAN_BR_LK);
 	}
 
 	@Override
 	public String toString() {
-		return new StringBuilder("vlasnik - [ime i prezime: ").append(imeIPrezime).append(", JMBG: ").append(jmbg).append(", broj licne karte=").append(brojLicneKarte).append("]").toString();
+		return new StringBuilder("vlasnik - [ime i prezime: ").append(imeIPrezime).append(", JMBG: ").append(jmbg)
+				.append(", broj licne karte=").append(brojLicneKarte).append("]").toString();
 	}
 }
