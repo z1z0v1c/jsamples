@@ -1,13 +1,11 @@
-/*
- * Za uneti niz celih brojeva duzine n (koja se takodje unosi), sortirati niz, ispitati da li sadrzi broj x
- * i ispisati prvih 5 clanova niza na standardni izla. Koristiti klasu Arrays.
- */
 
 package zadatak7;
 
 /**
+ * Za uneti niz celih brojeva duzine n (koja se takodje unosi), sortirati niz, ispitati da li sadrzi broj x
+ * i ispisati prvih 5 clanova niza na standardni izla. Koristiti klasu Arrays.
+ * 
  * @author Aleksandar.Zizovic
- *
  */
 
 import java.util.Scanner;

@@ -1,5 +1,15 @@
+
 package zadatak3;
+
 import java.util.Scanner;
+
+/**
+ * Koriscenjem while petlje ispisati sve parne brojeve izmedju brojeva a i b koji se unose preko
+ * standardnogu ulaza.
+ * 
+ * @author Aleksandar.Zizovic
+ * 
+ */
 
 public class ParniBrojevi {
 
@@ -59,5 +69,4 @@ public class ParniBrojevi {
 		}
 		return s;	 		
 	}
-
 }
