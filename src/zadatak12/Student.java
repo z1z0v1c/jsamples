@@ -69,6 +69,6 @@ public class Student implements Comparable<Student> {
 	@Override
 	public String toString() {
 		return new StringBuilder(this.ime).append(" ").append(this.prezime).append(" ").append(this.brojPoena)
-				.append(" ").append(this.getOcena()).append(" \n").toString();
+				.append(" ").append(this.getOcena()).toString();
 	}
 }
