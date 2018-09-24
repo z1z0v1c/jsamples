@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Napisati program koji umogucava unos imena studenta i broj poena osvojenih na
+ * Napisati program koji omogucava unos imena studenta i broj poena osvojenih na
  * testu preko standardnog ulaza (sve dok se ne unese odredjen znak za prekid
  * unosa podataka). Broj poena sme da bude od 0 do 100. Kao rezultat programa,
  * ocekuje se izlazni fajl "ocene.txt" u kome ce se nalaziti lista svih
@@ -108,7 +108,7 @@ public class Main {
 		return ulaz.nextInt();
 	}
 
-	// validacija unetog broja studenata
+	// validacija unetog broja poena
 	private static int unosBrojaPoena() {
 		int broj = unosBroja();
 		while (broj < 0 || broj > 100) {
