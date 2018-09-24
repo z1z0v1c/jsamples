@@ -27,9 +27,10 @@ public class Main {
 	private static Scanner ulaz = new Scanner(System.in);
 	private static final String IME = "Unesite ime studenata: ";
 	private static final String PREZIME = "Unesite prezime studenata: ";
-	private static final String BR_POENA = "Broj poena koji je student ostvario: ";
+	private static final String BR_POENA = "Broj poena koji je student ostvario (0 - 100): ";
 	private static final String POGRESAN_UNOS = "Pogresan unos! Pokusajte ponovo!";
-	private static final String REGEX = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
+	private static final String REGEX_IME = "^[A-Z][a-zA-Z]+";
+	private static final String REGEX_PREZIME = "^[A-Z]?[\\-'\\s]?[A-Z][a-zA-Z ]+$";
 	private static final String NASTAVAK = "Da li zelite da nastavite (da/ne)?";
 	private static final String KRAJ = "Kraj programa!";
 
@@ -41,11 +42,11 @@ public class Main {
 		// unos studenata
 		while (nastavi) {
 			System.out.println(IME);
-			String ime = unosImenaiPrezimena();
+			String ime = unosImena();
 			Student student = new Student();
 			student.setIme(ime);
 			System.out.println(PREZIME);
-			student.setPrezime(unosImenaiPrezimena());
+			student.setPrezime(unosPrezimena());
 			System.out.println(BR_POENA);
 			student.setBrojPoena(unosBrojaPoena());
 			studenti.add(student);
@@ -66,8 +67,7 @@ public class Main {
 		// upisivanje studenata u fajl
 		try (PrintWriter izlaz = new PrintWriter(fajl)) {
 			for (Student student : studenti) {
-				izlaz.print(student.toString());
-				izlaz.println("");
+				izlaz.println(student.toString());
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -75,12 +75,23 @@ public class Main {
 		ulaz.close();
 	}
 
-	private static String unosImenaiPrezimena() {
+	//validacija unetog imena
+	private static String unosImena() {
 		String imeIPrezime = ulaz.nextLine();
-		while (!imeIPrezime.matches(REGEX)) {
+		while (!imeIPrezime.matches(REGEX_IME)) {
 			if (!imeIPrezime.equals("")) {
 				System.out.println(POGRESAN_UNOS);
 			}
+			imeIPrezime = ulaz.nextLine();
+		}
+		return imeIPrezime;
+	}
+	
+	//validacija unetog prezimena
+	private static String unosPrezimena() {
+		String imeIPrezime = ulaz.nextLine();
+		while (!imeIPrezime.matches(REGEX_PREZIME)) {
+				System.out.println(POGRESAN_UNOS);
 			imeIPrezime = ulaz.nextLine();
 		}
 		return imeIPrezime;
@@ -98,7 +109,7 @@ public class Main {
 	// validacija unetog broja studenata
 	private static int unosBrojaPoena() {
 		int broj = unosBroja();
-		while (broj < 0) {
+		while (broj < 0 || broj > 100) {
 			System.out.println(POGRESAN_UNOS);
 			broj = unosBroja();
 		}
