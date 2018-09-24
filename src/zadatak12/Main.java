@@ -49,6 +49,8 @@ public class Main {
 			student.setPrezime(unosPrezimena());
 			System.out.println(BR_POENA);
 			student.setBrojPoena(unosBrojaPoena());
+			
+			//dodavanje studenta u listu
 			studenti.add(student);
 
 			// nastavak ili izlaz iz programa
@@ -75,26 +77,26 @@ public class Main {
 		ulaz.close();
 	}
 
-	//validacija unetog imena
+	// validacija unetog imena
 	private static String unosImena() {
-		String imeIPrezime = ulaz.nextLine();
-		while (!imeIPrezime.matches(REGEX_IME)) {
-			if (!imeIPrezime.equals("")) {
+		String ime = ulaz.nextLine();
+		while (!ime.matches(REGEX_IME)) {
+			if (!ime.equals("")) {
 				System.out.println(POGRESAN_UNOS);
 			}
-			imeIPrezime = ulaz.nextLine();
+			ime = ulaz.nextLine();
 		}
-		return imeIPrezime;
+		return ime;
 	}
 	
-	//validacija unetog prezimena
+	// validacija unetog prezimena
 	private static String unosPrezimena() {
-		String imeIPrezime = ulaz.nextLine();
-		while (!imeIPrezime.matches(REGEX_PREZIME)) {
+		String prezime = ulaz.nextLine();
+		while (!prezime.matches(REGEX_PREZIME)) {
 				System.out.println(POGRESAN_UNOS);
-			imeIPrezime = ulaz.nextLine();
+			prezime = ulaz.nextLine();
 		}
-		return imeIPrezime;
+		return prezime;
 	}
 
 	// provera da li je unet broj
