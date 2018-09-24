@@ -2,32 +2,19 @@
 package zadatak9;
 
 /**
- * <<<<<<< HEAD Kreirati projekat Nekretnina na sledeci nacin: - Apstraktna
- * klasa nekretnina koja od atributa ima: - adresu, zonu, kvadraturu i podatke o
- * vlasniku/instancu klase Vlasnik. - Vlasnik ima puno ime i prezime, JMBG i
- * broj licne karte. - Izvedene klase, Stan i Kuca imaju to String() metod gde
- * se ispisuju sve informacije o nekretnini ukljucujuci Vlasnika i cenu. - Cena
- * se racuna po principu kvadratura X zona (I zona 3000, II zona 2000, III zona
- * 1000, IV zona 500e) - Kuca ima dodatno polje povrsinaOkucnice - U cenu kuce
+ * Kreirati projekat Nekretnina na sledeci nacin: Apstraktna klasa Nekretnina
+ * koja od atributa ima: - adresu, zonu, kvadraturu i podatke o
+ * vlasniku/instancu klase Vlasnik. Vlasnik ima puno ime i prezime, JMBG i broj
+ * licne karte. Izvedene klase, Stan i Kuca imaju to String() metod gde se
+ * ispisuju sve informacije o nekretnini ukljucujuci Vlasnika i cenu. Cena se
+ * racuna po principu kvadratura X zona (I zona 3000, II zona 2000, III zona
+ * 1000, IV zona 500e). Kuca ima dodatno polje povrsinaOkucnice. U cenu kuce
  * ulazi i cena okucnice koja se racuna po principu (povrsinaOkucnice X Zona X
- * 15%) - Stan ima dva dodatna polja, povrsinaPodruma i povrsinaTerase - u cenu
+ * 15%) - Stan ima dva dodatna polja, povrsinaPodruma i povrsinaTerase. U cenu
  * Stana ulazi i cena podruma i terase ((povrsinaPodruma + povrsinaTerase) X
- * Zona X 33%) Napraviti Main klasu i u njoj kreirati instance klae Nekretnina i
- * napraviti objekte izvedenih klasa sa proizvoljnim argumentima. Ispisati
- * String reprezentaciju objekata - toString(). ======= Kreirati projekat
- * Nekretnina na sledeci nacin: - Apstraktna klasa Nekretnina koja od atributa
- * ima: - adresu, zonu, kvadraturu i podatke o vlasniku/instancu klase Vlasnik.
- * - Vlasnik ima puno ime i prezime, JMBG i broj licne karte. - Izvedene klase,
- * Stan i Kuca imaju to String() metod gde se ispisuju sve informacije o
- * nekretnini ukljucujuci Vlasnika i cenu. - Cena se racuna po principu
- * kvadratura X zona (I zona 3000, II zona 2000, III zona 1000, IV zona 500e) -
- * Kuca ima dodatno polje povrsinaOkucnice - U cenu kuce ulazi i cena okucnice
- * koja se racuna po principu (povrsinaOkucnice X Zona X 15%) - Stan ima dva
- * dodatna polja, povrsinaPodruma i povrsinaTerase - u cenu Stana ulazi i cena
- * podruma i terase ((povrsinaPodruma + povrsinaTerase) X Zona X 33%) Napraviti
- * Main klasu i u njoj kreirati instance klase Nekretnina i napraviti objekte
- * izvedenih klasa sa proizvoljnim argumentima. Ispisati String reprezentaciju
- * objekata - toString(). >>>>>>> 86aabac85a89a79ded40c1bf7c535d33d76db343
+ * Zona X 33%). Napraviti Main klasu i u njoj kreirati instance klase Nekretnina
+ * i napraviti objekte izvedenih klasa sa proizvoljnim argumentima. Ispisati
+ * String reprezentaciju objekata - toString().
  * 
  * @author Aleksandar.Zizovic
  */
