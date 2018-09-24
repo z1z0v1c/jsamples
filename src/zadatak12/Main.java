@@ -76,7 +76,7 @@ public class Main {
 	}
 
 	private static String unosImenaiPrezimena() {
-		String imeIPrezime = "";
+		String imeIPrezime = ulaz.nextLine();
 		while (!imeIPrezime.matches(REGEX)) {
 			if (!imeIPrezime.equals("")) {
 				System.out.println(POGRESAN_UNOS);
