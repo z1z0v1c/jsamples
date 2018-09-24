@@ -10,7 +10,7 @@ package zadatak9;
  * racuna po principu kvadratura X zona (I zona 3000, II zona 2000, III zona
  * 1000, IV zona 500e). Kuca ima dodatno polje povrsinaOkucnice. U cenu kuce
  * ulazi i cena okucnice koja se racuna po principu (povrsinaOkucnice X Zona X
- * 15%) - Stan ima dva dodatna polja, povrsinaPodruma i povrsinaTerase. U cenu
+ * 15%). Stan ima dva dodatna polja, povrsinaPodruma i povrsinaTerase. U cenu
  * Stana ulazi i cena podruma i terase ((povrsinaPodruma + povrsinaTerase) X
  * Zona X 33%). Napraviti Main klasu i u njoj kreirati instance klase Nekretnina
  * i napraviti objekte izvedenih klasa sa proizvoljnim argumentima. Ispisati
