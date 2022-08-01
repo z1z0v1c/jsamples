@@ -4,16 +4,13 @@ import java.util.List;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public class Company {
 	
 	private static final String NUMBER_OF_HOSPITALS= "Number of hospitals: ";
 	private static final String NUMBER_OF_DOCTORS= "\nNumber of doctors: ";
 	private static final String NUMBER_OF_NURSES= "\nNumber of Nurses: ";
 	private static final String NUMBER_OF_OTHER_STUFF= "\nNumber of other stuff: ";
-
 
 	private List<Hospital> hospitalList;
 

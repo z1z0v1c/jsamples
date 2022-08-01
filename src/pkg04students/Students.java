@@ -1,4 +1,3 @@
-
 package pkg04students;
 
 import java.util.Scanner;
@@ -11,7 +10,6 @@ import java.util.Scanner;
  *
  * @author Aleksandar.Zizovic
  */
-
 public class Students {
 
 	private static Scanner input = new Scanner(System.in);

@@ -1,5 +1,8 @@
 package pkg07array;
 
+import java.util.Scanner;
+import java.util.Arrays;
+
 /**
  * To enter a series of integers of length n (which is also entered), sort the series,
  * check if it contains the number x and print the first 5 members of the series to standard output.
@@ -7,10 +10,6 @@ package pkg07array;
  * 
  * @author Aleksandar.Zizovic
  */
-
-import java.util.Scanner;
-import java.util.Arrays;
-
 public class Array {
 
 	private static Scanner scanner = new Scanner(System.in);

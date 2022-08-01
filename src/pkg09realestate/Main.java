@@ -15,7 +15,6 @@ package pkg09realestate;
  *
  * @author Aleksandar.Zizovic
  */
-
 public class Main {
 
 	public static void main(String[] args) {

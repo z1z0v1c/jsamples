@@ -1,23 +1,20 @@
-
 package pkg05guessthenumber;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
- * Uraditi modifikaciju domaceg iz predhodne nedelje. Vrteti se u petlji dok ne pogodimo broj, 
- * ili budemo barem blizu (razlika manja od 5). Taj deo sa proverom pogodtka izdvojiti u zasebnu
- * metodu, kojoj se kao argument prosledjuje broj koji tipujemo, a povratna vrednost metode je 
- * 0 - ako smo pogodili, 1 - ako smo bili blizu,2 - ako smo promasili. Na osnovu toga ostajemo
- * ili izlazimo iz petlje i zavrsavamo program sa odgovarajucom porukom.
+ * Modify the homework from the previous week. Loop until we hit the number, or at least come close (difference less than 5).
+ * Separate that part with the hit check into a separate method, to which the number we type is passed as an argument,
+ * and the return value of the method is 0 - if we hit, 1 - if we were close, 2 - if we missed.
+ * Based on that, we stay or exit the loop and end the program with the appropriate message.
  * 
  * @author Aleksandar.Zizovic
  */
-
-import java.util.Scanner;
-
 public class GuessTheNumber {
 
 	private static Scanner scanner = new Scanner(System.in);
+	
 	private static final String ENTRY = "Enter a number from 1 to 50: ";
 	private static final String DEFAULT_NUMBER = "The default number is: %d.";
 	private static final String WRONG_ENTRY = "Wrong entry! Try again!";

@@ -21,9 +21,7 @@ import java.util.List;
  * contains a toString() method that prints out how many hospitals and doctors, nurses, and staff each have.
  * 
  * @author Aleksandar.Zizovic
- *
  */
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -55,7 +53,6 @@ public class Main {
 		listOfHospitals.add(hospital);
 		listOfHospitals.add(hospital);
 		listOfHospitals.add(hospital);
-		
 		
 		Company company = new Company(listOfHospitals);
 		

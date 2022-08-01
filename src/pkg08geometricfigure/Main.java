@@ -13,9 +13,7 @@ package pkg08geometricfigure;
 * Print the String representation of the object - toString()
 *
 * @author Aleksandar.Zizovic
-* 
 */
-
 public class Main {
 
 	public static void main(String[] args) {

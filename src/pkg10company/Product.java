@@ -2,7 +2,6 @@ package pkg10company;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
 public abstract class Product {
 

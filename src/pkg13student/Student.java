@@ -2,7 +2,6 @@ package pkg13student;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
 public class Student implements Comparable<Student> {
 

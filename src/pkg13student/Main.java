@@ -39,7 +39,7 @@ public class Main {
 		Collections.sort(students);
 		Collections.reverse(students);
 		
-		// print student
+		// print students
 		for (Student student : students) {
 			System.out.print(student.toString());
 		}

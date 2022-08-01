@@ -2,9 +2,7 @@ package pkg09realestate;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public class Apartment extends RealEstate{
 
 	private double basementArea;

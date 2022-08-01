@@ -1,5 +1,8 @@
 package pkg01guessthenumber;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  * Write a program to guess a randomly generated number in the range from 1 to 50.
  * The program should work in the following way: The user enters an integer via the standard input.
@@ -10,12 +13,7 @@ package pkg01guessthenumber;
  * and if the difference is greater than 5 : 'Better luck next time'.
  * 
  * @author Aleksandar.Zizovic
- *
  */
-
-import java.util.Random;
-import java.util.Scanner;
-
 public class GuessTheNumber {
 
 	private static Scanner scanner = new Scanner(System.in);

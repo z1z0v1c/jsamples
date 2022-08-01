@@ -2,9 +2,7 @@ package pkg11hospital;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public abstract class Staff {
 
 	private String firstName;

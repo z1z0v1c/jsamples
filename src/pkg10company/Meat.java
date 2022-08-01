@@ -2,18 +2,16 @@ package pkg10company;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
-public class Меат extends Product{
+public class Meat extends Product{
 
 	private String animalОrigin;
 	private static final double VAT = 1.08;
 
-	Меат() {
+	Meat() {
 	}
 
-	Меат(String name, double price, String bestBefore, String animalОrigin) {
+	Meat(String name, double price, String bestBefore, String animalОrigin) {
 		super(name, price, bestBefore);
 		this.animalОrigin = animalОrigin;
 	}

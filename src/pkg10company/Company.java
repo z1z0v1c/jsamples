@@ -4,7 +4,6 @@ import java.util.List;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
 public class Company {
 	

@@ -2,9 +2,7 @@ package pkg11hospital;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public class OtherStaff extends Staff {
 
 	OtherStaff() {

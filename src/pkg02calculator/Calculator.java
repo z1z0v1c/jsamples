@@ -1,5 +1,7 @@
 package pkg02calculator;
 
+import java.util.Scanner;
+
 /**
  * Write a program that will represent a simple calculator. 
  * The program should work so that the user enters two integers,
@@ -9,9 +11,6 @@ package pkg02calculator;
  * 
  * @author Aleksandar.Zizovic
  */
-
-import java.util.Scanner;
-
 public class Calculator {
 
 	private static Scanner scanner = new Scanner(System.in);

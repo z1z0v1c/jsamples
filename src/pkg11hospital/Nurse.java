@@ -2,7 +2,6 @@ package pkg11hospital;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
 public class Nurse extends Staff{
 

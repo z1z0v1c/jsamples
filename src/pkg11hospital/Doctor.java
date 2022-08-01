@@ -2,9 +2,7 @@ package pkg11hospital;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public class Doctor extends Staff{
 
 	private String faculty;

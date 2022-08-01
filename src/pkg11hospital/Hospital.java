@@ -4,9 +4,7 @@ import java.util.List;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public class Hospital {
 
 	private String name;

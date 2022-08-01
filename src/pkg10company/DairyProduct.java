@@ -3,7 +3,6 @@ package pkg10company;
 /**
  * @author Aleksandar.Zizovic
  */
-
 public class DairyProduct extends Product {
 
 	private String milkOrigin;

@@ -2,9 +2,7 @@ package pkg09realestate;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public abstract class RealEstate {
 
 	private String address;

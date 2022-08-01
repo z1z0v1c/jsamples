@@ -8,7 +8,6 @@ import java.util.Scanner;
  * 
  * @author Aleksandar.Zizovic
  */
-
 public class EvenNumbers {
 
 	private static Scanner scanner = new Scanner(System.in);

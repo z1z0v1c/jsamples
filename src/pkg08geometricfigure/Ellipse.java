@@ -44,9 +44,4 @@ public class Ellipse extends Circle {
 				.append("; area: ").append(area()).append(".")
 				.toString();
 	}
-
-
-	
-	
-	
 }

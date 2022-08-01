@@ -2,9 +2,7 @@ package pkg10company;
 
 /**
  * @author Aleksandar.Zizovic
- *
  */
-
 public class Juice extends Product{
 	 
 	private String composition;
