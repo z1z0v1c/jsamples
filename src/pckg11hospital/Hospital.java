@@ -3,52 +3,53 @@ package pckg11hospital;
 import java.util.List;
 
 /**
- * @author Aleksandar.Zizovic
+ * @author Aleksandar Zizovic
  */
 public class Hospital {
+    private final String name;
+    private final Staff executive;
+    private final List<OtherStaff> staffList;
+    private final List<Doctor> doctors;
+    private final List<Nurse> nurses;
 
-	private String name;
-	private Staff executive;
-	private List<OtherStaff> staffList;
-	private List<Doctor> doctorList;
-	private List<Nurse> nurseList;
+    public Hospital(
+            String name,
+            Staff executive,
+            List<OtherStaff> staffList,
+            List<Doctor> doctors,
+            List<Nurse> nurses
+    ) {
+        this.name = name;
+        this.executive = executive;
+        this.staffList = staffList;
+        this.doctors = doctors;
+        this.nurses = nurses;
+    }
 
-	Hospital() {
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public List<OtherStaff> getStaffList() {
+        return staffList;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public List<Doctor> getDoctors() {
+        return doctors;
+    }
 
-	public void setExecutive(Staff executive) {
-		this.executive = executive;
-	}
+    public List<Nurse> getNurses() {
+        return nurses;
+    }
 
-	public List<OtherStaff> getStaffList() {
-		return staffList;
-	}
-
-	public void setStaffList(List<OtherStaff> staffList) {
-		this.staffList = staffList;
-	}
-
-	public List<Doctor> getDoctorList() {
-		return doctorList;
-	}
-
-	public void setDoctorList(List<Doctor> doctorList) {
-		this.doctorList = doctorList;
-	}
-
-	public List<Nurse> getNurseList() {
-		return nurseList;
-	}
-
-	public void setNurseList(List<Nurse> nurseList) {
-		this.nurseList = nurseList;
-	}
+    @Override
+    public String toString() {
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(" - name: ").append(this.name)
+                .append("; executive: ").append(this.executive)
+                .append("; staff list: ").append(this.staffList)
+                .append("; doctors: ").append(this.doctors)
+                .append("; nurses: ").append(this.nurses)
+                .toString();
+    }
 }

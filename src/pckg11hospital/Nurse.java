@@ -1,7 +1,7 @@
 package pckg11hospital;
 
 /**
- * @author Aleksandar.Zizovic
+ * @author Aleksandar Zizovic
  */
 public class Nurse extends Staff {
     private final int shift;
@@ -20,8 +20,9 @@ public class Nurse extends Staff {
 
     @Override
     public String toString() {
-        return "Nurse{" +
-                "shift=" + shift +
-                "} " + super.toString();
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(super.toString())
+                .append("; shift: ").append(this.shift)
+                .toString();
     }
 }

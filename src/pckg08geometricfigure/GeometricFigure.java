@@ -1,27 +1,25 @@
 package pckg08geometricfigure;
 
 public abstract class GeometricFigure {
-	
-	private String color;
-    private boolean filled;
-    
-    protected GeometricFigure() {
-		super();
-	}
+    private final String color;
+    private final boolean isFilled;
 
-	protected GeometricFigure(String color, boolean filled) {
-		super();
-		this.color = color;
-		this.filled = filled;
-	}
-		
-	public abstract double perimeter();
-	
-	public abstract double area();
+    protected GeometricFigure(String color, boolean isFilled) {
+        super();
+        this.color = color;
+        this.isFilled = isFilled;
+    }
 
-	@Override
-	public String toString() {
-		return new StringBuilder("Perimeter: ").append(perimeter())
-				.append("; Area: ").append(area()).toString();
-	}
+    public abstract double getPerimeter();
+
+    public abstract double area();
+
+    @Override
+    public String toString() {
+        return new StringBuilder()
+                .append("Color: ").append(color)
+                .append("; Is filled: ").append(isFilled)
+                .append("; Perimeter: ").append(getPerimeter())
+                .append("; Area: ").append(area()).toString();
+    }
 }

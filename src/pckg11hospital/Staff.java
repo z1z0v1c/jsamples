@@ -1,7 +1,7 @@
 package pckg11hospital;
 
 /**
- * @author Aleksandar.Zizovic
+ * @author Aleksandar Zizovic
  */
 public abstract class Staff {
     private final String firstName;
@@ -24,15 +24,14 @@ public abstract class Staff {
         this.birthday = birthday;
     }
 
-
     @Override
     public String toString() {
-        return "Staff{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", birthday='" + birthday + '\'' +
-                '}';
+        return new StringBuilder(getClass().getSimpleName())
+                .append(" - first name: ").append(this.firstName)
+                .append("; last name: ").append(this.lastName)
+                .append("; address: ").append(this.address)
+                .append("; telephone: ").append(this.telephone)
+                .append("; birthday: ").append(this.birthday)
+                .toString();
     }
 }
