@@ -23,7 +23,7 @@ import java.util.Scanner;
  */
 public class Main {
 
-	private static Scanner input = new Scanner(System.in);
+	private static final Scanner input = new Scanner(System.in);
 	private static final String FIRST_NAME = "Enter student first name: ";
 	private static final String LAST_NAME = "Enter the student's last name: ";
 	private static final String POINTS = "Number of points the student achieved (0 - 100): ";

@@ -26,8 +26,8 @@ public class Main {
 			RealEstate house = new House("Svetog Nikole 10", 2, 76.0, owner1, 100.0);
 			RealEstate apartment = new Apartment("Cirila i Metodija 33", 3, 44.0, owner2, 10.0, 7.0);
 
-			System.out.println(house.toString());
-			System.out.println(apartment.toString());
+			System.out.println(house);
+			System.out.println(apartment);
 		} catch (IllegalArgumentException exception) {
 			exception.printStackTrace();
 		}

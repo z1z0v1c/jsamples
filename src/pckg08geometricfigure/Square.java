@@ -2,15 +2,7 @@ package pckg08geometricfigure;
 
 public class Square extends GeometricFigure {
 
-	private double sideA;
-
-	public Square() {
-		super();
-	}
-
-	public Square(double sideA) {
-		this.sideA = sideA;
-	}
+	private final double sideA;
 
 	public Square(String color, boolean filled, double sideA) {
 		super(color, filled);
@@ -19,10 +11,6 @@ public class Square extends GeometricFigure {
 
 	public double getSideA() {
 		return sideA;
-	}
-
-	public void setSideA(double sideA) {
-		this.sideA = sideA;
 	}
 
 	@Override

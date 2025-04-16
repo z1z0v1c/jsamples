@@ -12,10 +12,9 @@ import java.util.Arrays;
  */
 public class Array {
 
-	private static Scanner scanner = new Scanner(System.in);
-	private static int[] array;
-	
-	private static final String ARRAY_LENGTH = "Enter the string length (at least 5): ";
+	private static final Scanner scanner = new Scanner(System.in);
+
+    private static final String ARRAY_LENGTH = "Enter the string length (at least 5): ";
 	private static final String WRONG_ENTRY = "Wrong entry! Try again!";
 	private static final String WRONG_ENTRY_LENGTH = "Wrong entry! Minimum string length is 5! Try again! ";
 	private static final String REQUESTED_NUMBER = "Enter the search number: ";
@@ -25,7 +24,7 @@ public class Array {
 
 	public static void main(String[] args) {
 
-		array = arrayEntry();
+        int[] array = arrayEntry();
 
 		sort(array);
 
@@ -48,7 +47,7 @@ public class Array {
 	// entering the length and members of the string
 	private static int[] arrayEntry() {
 		System.out.println(ARRAY_LENGTH);
-		int arrayLength = 0;
+		int arrayLength;
 
 		do {
 			arrayLength = numberEntry();

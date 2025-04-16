@@ -13,9 +13,6 @@ public abstract class RealEstate {
 	private static final String WRONG_ENTRY_ZONE = "Wrong entry! You have not entered the correct zone number!";
 	private static final String WRONG_ENTRY_AREA = "Wrong entry! You have not entered the correct square footage!";
 
-	protected RealEstate() {
-	}
-
 	protected RealEstate(String address, int zone, double area, Owner owner) {
 		this.address = address;
 		if (zone > 0 && zone < 5) {
@@ -33,26 +30,6 @@ public abstract class RealEstate {
 		this.owner = owner;
 	}
 
-	public String getAdresa() {
-		return address;
-	}
-
-	public void setAdresa(String adresa) {
-		this.address = adresa;
-	}
-
-	public int getZona() {
-		return zone;
-	}
-
-	public void setZona(int zona) {
-		if (zona > 0 && zona < 5) {
-			this.zone = zona;
-		} else {
-			throw new IllegalArgumentException(WRONG_ENTRY_ZONE);
-		}
-	}
-
 	public double getArea() {
 		return area;
 	}
@@ -63,14 +40,6 @@ public abstract class RealEstate {
 		} else {
 			throw new IllegalArgumentException(WRONG_ENTRY_AREA);
 		}
-	}
-
-	public Owner getOwner() {
-		return owner;
-	}
-
-	public void setOwner(Owner owner) {
-		this.owner = owner;
 	}
 
 	@Override

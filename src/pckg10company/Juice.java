@@ -7,20 +7,9 @@ public class Juice extends Product{
 	 
 	private String composition;
 	private static final double VAT = 1.2;
-	
-	Juice() {
-	}
 
 	Juice(String name, double price, String bestBefore, String composition) {
 		super(name, price, bestBefore);
-		this.composition = composition;
-	}
-
-	public String getComposition() {
-		return composition;
-	}
-
-	public void setComposition(String composition) {
 		this.composition = composition;
 	}
 

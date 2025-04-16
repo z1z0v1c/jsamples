@@ -15,9 +15,6 @@ public class Owner {
 	private static final String WRONG_ENTRY_ID = "Wrong entry! You have not entered the correct ID!";
 	private static final String WRONG_ENTRY_IDENTITY_CARD_ID = "Wrong entry! You have not entered the ID card number correctly!";
 
-	public Owner() {
-	}
-
 	public Owner(String nameAndSurname, String id, String identityCardNumber) {
 		if (nameAndSurname.matches(REGEX1))
 			this.nameAndSurname = nameAndSurname;
@@ -35,10 +32,6 @@ public class Owner {
 			throw new IllegalArgumentException(WRONG_ENTRY_IDENTITY_CARD_ID);
 	}
 
-	public String getNameAndSurname() {
-		return nameAndSurname;
-	}
-
 	public void setNameAndSurname(String nameAndSurname) {
 		if (nameAndSurname.matches(REGEX1))
 			this.nameAndSurname = nameAndSurname;
@@ -46,19 +39,11 @@ public class Owner {
 			throw new IllegalArgumentException(WRONG_ENTRY_NAME);
 	}
 
-	public String getId() {
-		return id;
-	}
-
 	public void setJMBG(String id) {
 		if (id.matches(REGEX2) && id.length() == 13)
 			this.id = id;
 		else
 			throw new IllegalArgumentException(WRONG_ENTRY_ID);
-	}
-
-	public String getIdentityCardNumber() {
-		return identityCardNumber;
 	}
 
 	public void setBrojLicneKarte(String identityCardNumber) {

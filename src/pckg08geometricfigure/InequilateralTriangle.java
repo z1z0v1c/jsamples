@@ -1,19 +1,8 @@
 package pckg08geometricfigure;
 
 public class InequilateralTriangle extends Triangle {
-
-	private double sideB;
-	private double sideC;
-
-	public InequilateralTriangle() {
-		super();
-	}
-
-	public InequilateralTriangle(double sideA, double sideB, double sideC) {
-		super(sideA);
-		this.sideB = sideB;
-		this.sideC = sideC;
-	}
+	private final double sideB;
+	private final double sideC;
 
 	public InequilateralTriangle(String color, boolean filled, double sideA, double sideB, double sideC) {
 		super(color, filled, sideA);
@@ -25,16 +14,8 @@ public class InequilateralTriangle extends Triangle {
 		return sideB;
 	}
 
-	public void setSideB(double sideB) {
-		this.sideB = sideB;
-	}
-
 	public double getSideC() {
 		return sideC;
-	}
-
-	public void setSideC(double sideC) {
-		this.sideC = sideC;
 	}
 
 	@Override

@@ -12,11 +12,10 @@ import java.util.Scanner;
  * if there is a difference between the numbers 5 or less : 'Good try, you were very close', 
  * and if the difference is greater than 5 : 'Better luck next time'.
  * 
- * @author Aleksandar.Zizovic
+ * @author Aleksandar Zizovic
  */
 public class GuessTheNumber {
-
-	private static Scanner scanner = new Scanner(System.in);
+	private static final Scanner scanner = new Scanner(System.in);
 	private static final String ENTRY = "Enter a number from 1 to 50: ";
 	private static final String WRONG_ENTRY = "Wrong entry! Try again!";
 	private static final String WRONG_ENTRY_NUMBER = "The entered value is not a number! Try again!";
@@ -43,7 +42,7 @@ public class GuessTheNumber {
 			// random number generation and display
 			Random randomGenerator = new Random();
 			int randomNumber = randomGenerator.nextInt(50) + 1;
-			System.out.println(new StringBuilder("The default number is: ").append(randomNumber).toString());
+			System.out.println("The default number is: " + randomNumber);
 
 			// hit check
 			if (randomNumber == enteredNumber) {

@@ -1,14 +1,16 @@
 package pckg11hospital;
 
 /**
- * @author Aleksandar.Zizovic
+ * @author Aleksandar Zizovic
  */
 public class OtherStaff extends Staff {
-
-	OtherStaff() {
-	}
-
-	OtherStaff(String firstName, String lastName, String address, String telephone, String birthday) {
+	OtherStaff(
+			String firstName,
+			String lastName,
+			String address,
+			String telephone,
+			String birthday
+	) {
 		super(firstName, lastName, address, telephone, birthday);
 	}	
 }

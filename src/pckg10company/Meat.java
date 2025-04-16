@@ -4,30 +4,19 @@ package pckg10company;
  * @author Aleksandar.Zizovic
  */
 public class Meat extends Product{
-
-	private String animalОrigin;
 	private static final double VAT = 1.08;
 
-	Meat() {
-	}
+	private final String animalOrigin;
 
-	Meat(String name, double price, String bestBefore, String animalОrigin) {
+	Meat(String name, double price, String bestBefore, String animalOrigin) {
 		super(name, price, bestBefore);
-		this.animalОrigin = animalОrigin;
-	}
-
-	public String getAnimalОrigin() {
-		return animalОrigin;
-	}
-
-	public void setAnimalОrigin(String animalОrigin) {
-		this.animalОrigin = animalОrigin;
+		this.animalOrigin = animalOrigin;
 	}
 
 	@Override
 	public String toString() {
 		return new StringBuilder(super.toString())
-			.append(", animal origin: ").append(animalОrigin)
+			.append(", animal origin: ").append(animalOrigin)
 			.append(TOTAL_PRODUCT_PRICE).append(getTotalProductPrice())
 			.toString();
 	}

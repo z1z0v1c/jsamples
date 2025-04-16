@@ -16,25 +16,12 @@ public class Hospital {
 	Hospital() {
 	}
 
-	Hospital(String name, Staff executive, List<OtherStaff> staffList, List<Doctor> doctorList,
-			List<Nurse> nurseList) {
-		this.name = name;
-		this.executive = executive;
-		this.staffList = staffList;
-		this.doctorList = doctorList;
-		this.nurseList = nurseList;
-	}
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Staff getExecutive() {
-		return executive;
 	}
 
 	public void setExecutive(Staff executive) {

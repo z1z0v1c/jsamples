@@ -1,16 +1,7 @@
 package pckg08geometricfigure;
 
 public class Circle extends GeometricFigure {
-
-	private double radius;
-
-	public Circle() {
-		super();
-	}
-
-	public Circle(double radius) {
-		this.radius = radius;
-	}
+	private final double radius;
 
 	public Circle(String color, boolean filled, double radius) {
 		super(color, filled);
@@ -19,10 +10,6 @@ public class Circle extends GeometricFigure {
 
 	public double getRadius() {
 		return radius;
-	}
-
-	public void setRadius(double radius) {
-		this.radius = radius;
 	}
 
 	@Override

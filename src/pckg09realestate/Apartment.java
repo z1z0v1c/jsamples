@@ -5,31 +5,12 @@ package pckg09realestate;
  */
 public class Apartment extends RealEstate{
 
-	private double basementArea;
-	private double terraceArea;
-	
-	public Apartment() {
-	}
-	
+	private final double basementArea;
+	private final double terraceArea;
+
 	public Apartment(String address, int zone, double area, Owner owner, double basementArea, double terraceArea) {
 		super(address, zone, area, owner);
 		this.basementArea = basementArea;
-		this.terraceArea = terraceArea;
-	}
-	
-	public double getBasementArea() {
-		return basementArea;
-	}
-	
-	public void setBasementArea(double basementArea) {
-		this.basementArea = basementArea;
-	}
-	
-	public double getTerraceArea() {
-		return terraceArea;
-	}
-	
-	public void setTerraceArea(double terraceArea) {
 		this.terraceArea = terraceArea;
 	}
 

@@ -4,70 +4,35 @@ package pckg11hospital;
  * @author Aleksandar.Zizovic
  */
 public abstract class Staff {
+    private final String firstName;
+    private final String lastName;
+    private final String address;
+    private final String telephone;
+    private final String birthday;
 
-	private String firstName;
-	private String lastName;
-	private String address;
-	private String telephone;
-	private String birthday;
-	
-	Staff() {
-	}
-
-	Staff(String firstName, String lastName, String address, String telephone, String birthday) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.telephone = telephone;
-		this.birthday = birthday;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
+    Staff(
+            String firstName,
+            String lastName,
+            String address,
+            String telephone,
+            String birthday
+    ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.telephone = telephone;
+        this.birthday = birthday;
+    }
 
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-
-	public String getLastName() {
-		return lastName;
-	}
-
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-
-	public String getAddress() {
-		return address;
-	}
-
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-
-	public String getTelephone() {
-		return telephone;
-	}
-
-
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
-	}
-
-
-	public String getBirthday() {
-		return birthday;
-	}
-
-
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}	
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", birthday='" + birthday + '\'' +
+                '}';
+    }
 }

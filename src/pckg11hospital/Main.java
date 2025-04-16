@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Write a program that describes the following scenario:
- *
+ * <p>
  * The company owns a number of private hospitals. Each hospital has its own employees. Employees can be:
  * - Doctors
  * - Staff
@@ -23,9 +23,7 @@ import java.util.List;
  * @author Aleksandar.Zizovic
  */
 public class Main {
-
 	public static void main(String[] args) {
-
 		OtherStaff otherStuff = new OtherStaff("Petar", "Petrovic", "Zahumska 6", "011222333", "1.5.1968");
 		Nurse nurse = new Nurse("Ivana", "Ivanovic", "Igmanska 12", "011333444", "7.3.1983", 1);
 		Doctor doctor = new Doctor("Dejan", "Jovanovic", "Dimitrija Tucovica 56", "011000111", "28.10.1971", "Medicinski fakultet");
@@ -56,6 +54,6 @@ public class Main {
 		
 		Company company = new Company(listOfHospitals);
 		
-		System.out.println(company.toString());		
+		System.out.println(company);
 	}
 }

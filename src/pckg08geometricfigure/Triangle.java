@@ -4,14 +4,6 @@ public class Triangle extends GeometricFigure {
 
 	private double sideA;
 
-	public Triangle() {
-		super();
-	}
-
-	public Triangle(double sideA) {
-		this.sideA = sideA;
-	}
-
 	public Triangle(String color, boolean filled, double sideA) {
 		super(color, filled);
 		this.sideA = sideA;
@@ -19,10 +11,6 @@ public class Triangle extends GeometricFigure {
 
 	public double getSideA() {
 		return sideA;
-	}
-
-	public void setSideA(double sideA) {
-		this.sideA = sideA;
 	}
 
 	@Override

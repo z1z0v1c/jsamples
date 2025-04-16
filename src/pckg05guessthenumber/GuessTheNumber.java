@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class GuessTheNumber {
 
-	private static Scanner scanner = new Scanner(System.in);
+	private static final Scanner scanner = new Scanner(System.in);
 	
 	private static final String ENTRY = "Enter a number from 1 to 50: ";
 	private static final String DEFAULT_NUMBER = "The default number is: %d.";

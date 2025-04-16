@@ -3,23 +3,25 @@ package pckg11hospital;
 /**
  * @author Aleksandar.Zizovic
  */
-public class Nurse extends Staff{
+public class Nurse extends Staff {
+    private final int shift;
 
-	private int shift;
+    Nurse(
+            String firstName,
+            String lastName,
+            String address,
+            String telephone,
+            String birthday,
+            int shift
+    ) {
+        super(firstName, lastName, address, telephone, birthday);
+        this.shift = shift;
+    }
 
-	Nurse() {
-	}
-
-	Nurse(String firstName, String lastName, String address, String telephone, String birthday, int shift) {
-		super(firstName, lastName, address, telephone, birthday);
-		this.shift = shift;
-	}
-
-	public int getShift() {
-		return shift;
-	}
-
-	public void setShift(int shift) {
-		this.shift = shift;
-	}	
+    @Override
+    public String toString() {
+        return "Nurse{" +
+                "shift=" + shift +
+                "} " + super.toString();
+    }
 }

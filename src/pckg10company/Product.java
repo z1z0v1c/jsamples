@@ -4,15 +4,11 @@ package pckg10company;
  * @author Aleksandar.Zizovic
  */
 public abstract class Product {
+	protected static final String TOTAL_PRODUCT_PRICE = ". TOTAL PRODUCT PRICE: ";
 
 	private String name;
-	private double price;
-	private String bestBefore;
-	
-	protected static final String TOTAL_PRODUCT_PRICE = ". TOTAL PRODUCT PRICE: ";
-	
-	Product() {
-	}
+	private final double price;
+	private final String bestBefore;
 
 	Product(String name, double price, String bestBefore) {
 		super();
@@ -31,18 +27,6 @@ public abstract class Product {
 
 	public double getPrice() {
 		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public String getBestBefore() {
-		return bestBefore;
-	}
-
-	public void setBestBefore(String bestBefore) {
-		this.bestBefore = bestBefore;
 	}
 
 	@Override

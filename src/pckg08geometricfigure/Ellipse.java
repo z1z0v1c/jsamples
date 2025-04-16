@@ -1,25 +1,11 @@
 package pckg08geometricfigure;
 
 public class Ellipse extends Circle {
-
 	private double radius2;
 
-	public Ellipse() {
-		super();
-	}
-
-	public Ellipse(double radius, double radius2) {
-		this.setRadius(radius);
-		this.setRadius2(radius2);
-	}
-	
 	public Ellipse(String color, boolean filled, double radius, double radius2) {
 		super(color, filled, radius);
 		this.setRadius2(radius2);
-	}
-
-		public double getRadius2() {
-		return radius2;
 	}
 
 	public void setRadius2(double radius2) {
@@ -38,7 +24,8 @@ public class Ellipse extends Circle {
 
 	@Override
 	public String toString() {
-		return new StringBuilder("ELLIPSE - radius 1: ").append(getRadius())
+		return new StringBuilder("ELLIPSE - radius 1: ")
+				.append(getRadius())
 				.append("; radius 2: ").append(radius2)
 				.append("; perimeter: ").append(perimeter())
 				.append("; area: ").append(area()).append(".")

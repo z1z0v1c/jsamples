@@ -12,9 +12,8 @@ import java.util.Scanner;
  * @author Aleksandar.Zizovic
  */
 public class Calculator {
+	private static final Scanner scanner = new Scanner(System.in);
 
-	private static Scanner scanner = new Scanner(System.in);
-	
 	private static final String ENTRY = "Enter %s number: ";
 	private static final String ENTRY_OPERATION = "Enter the desired operation (a, s, m, d): ";
 	private static final String RESULT = "%s of numbers entered is: %f";
@@ -26,7 +25,6 @@ public class Calculator {
 	private static final String THE_END = "End of program!";
 
 	public static void main(String[] args) {
-
 		while (true) {
 			System.out.println(String.format(ENTRY, "first"));
 			double firstNumber = numberEntry();

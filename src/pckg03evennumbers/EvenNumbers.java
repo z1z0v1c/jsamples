@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class EvenNumbers {
 
-	private static Scanner scanner = new Scanner(System.in);
+	private static final Scanner scanner = new Scanner(System.in);
 	
 	private static final String LOWER_lIMIT = "Enter the lower limit: ";
 	private static final String HIGHER_LIMIT = "Enter the higher limit:";
