@@ -9,25 +9,25 @@ public class Square extends GeometricFigure {
     }
 
     public double getSideA() {
-        return sideA;
+        return this.sideA;
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * sideA;
+        return 4 * this.sideA;
     }
 
     @Override
-    public double area() {
-        return sideA * sideA;
+    public double getArea() {
+        return this.sideA * this.sideA;
     }
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("Square - side: ").append(sideA)
-                .append("; perimeter: ").append(getPerimeter())
-                .append("; area: ").append(area())
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(": Side = ").append(this.sideA)
+                .append("; Perimeter = ").append(this.getPerimeter())
+                .append("; Area = ").append(this.getArea())
                 .append(".").toString();
     }
 }

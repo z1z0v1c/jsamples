@@ -1,4 +1,2 @@
-Petar Petrovic 84 9 
-Marko Markovic 79 8 
-Jovan Jovanovic 67 7 
-Ivan Ivanovic 41 5 
+Pera Peric: points = 89, grade = 9
+Aca Zizovic: points = 74, grade = 8

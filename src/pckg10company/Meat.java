@@ -21,8 +21,8 @@ public class Meat extends Product {
     @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", animal origin: ").append(animalOrigin)
-                .append(TOTAL_PRODUCT_PRICE).append(getTotalProductPrice())
+                .append("\n\t\tAnimal origin: ").append(this.animalOrigin).append("\n\t\t")
+                .append(TOTAL_PRODUCT_PRICE).append(this.getTotalProductPrice()).append("\n\t")
                 .toString();
     }
 }

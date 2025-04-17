@@ -21,8 +21,8 @@ public class Coffee extends Product {
     @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", type of coffee: ").append((this.isGround) ? "ground" : "in grain")
-                .append(TOTAL_PRODUCT_PRICE).append(getTotalProductPrice())
+                .append("\n\t\tType of coffee: ").append((this.isGround) ? "ground" : "in grain").append("\n\t\t")
+                .append(TOTAL_PRODUCT_PRICE).append(this.getTotalProductPrice()).append("\n\t")
                 .toString();
     }
 }

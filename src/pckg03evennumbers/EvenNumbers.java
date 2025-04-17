@@ -3,8 +3,8 @@ package pckg03evennumbers;
 import java.util.Scanner;
 
 /**
- * Using the while loop, print out all the even numbers between the numbers a
- * and b that are entered through the standard input.
+ * Using the while loop, print out all the even numbers between the numbers a and b that are entered through the
+ * standard input.
  *
  * @author Aleksandar Zizovic
  */
@@ -38,7 +38,7 @@ public class EvenNumbers {
             // Print even numbers
             while (lowerLimit <= higherLimit) {
                 if (lowerLimit % 2 == 0) {
-                    System.out.print(lowerLimit + " ");
+                    System.out.print(lowerLimit + "\n");
                 }
 
                 lowerLimit++;
@@ -46,7 +46,7 @@ public class EvenNumbers {
 
             System.out.println(CONTINUE);
 
-            // Continue or exit the program
+            // Exit (or continue)
             if (!shouldContinue()) {
                 System.out.println(THE_END);
                 break;
@@ -56,7 +56,7 @@ public class EvenNumbers {
         scanner.close();
     }
 
-    // Verification of number entry
+    // Validate number entry
     private static int entry() {
         while (!scanner.hasNextInt()) {
             System.out.println(WRONG_ENTRY);
@@ -66,7 +66,7 @@ public class EvenNumbers {
         return scanner.nextInt();
     }
 
-    // Response validation to continue or exit the program
+    // Validate response for program termination
     private static boolean shouldContinue() {
         String answer = scanner.next();
 

@@ -19,9 +19,7 @@ public class Doctor extends Staff {
 
     @Override
     public String toString() {
-        return new StringBuilder(this.getClass().getSimpleName())
-                .append(super.toString())
-                .append("; faculty: ").append(this.faculty)
-                .toString();
+        return new StringBuilder(this.getClass().getSimpleName()).append(super.toString())
+                .append(", Faculty: ").append(this.faculty).toString();
     }
 }

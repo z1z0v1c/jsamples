@@ -17,33 +17,33 @@ public class InequilateralTriangle extends Triangle {
     }
 
     public double getSideB() {
-        return sideB;
+        return this.sideB;
     }
 
     public double getSideC() {
-        return sideC;
+        return this.sideC;
     }
 
     @Override
     public double getPerimeter() {
-        return getSideA() + sideB + sideC;
+        return getSideA() + this.sideB + this.sideC;
     }
 
     @Override
-    public double area() {
-        double p = (getSideA() + sideB + sideC) / 2;
+    public double getArea() {
+        double p = (getSideA() + this.sideB + this.sideC) / 2;
 
-        return Math.sqrt(p * (p - getSideA()) * (p - sideB) * (p - sideC));
+        return Math.sqrt(p * (p - getSideA()) * (p - this.sideB) * (p - this.sideC));
     }
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("Inequilateral triangle - side a: ").append(getSideA())
-                .append("; side b: ").append(getSideB())
-                .append("; side c: ").append(getSideC())
-                .append("; perimeter: ").append(getPerimeter())
-                .append("; perimeter: ").append(area())
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(": Side A = ").append(this.getSideA())
+                .append("; Side B = ").append(this.getSideB())
+                .append("; Side C = ").append(this.getSideC())
+                .append("; Perimeter = ").append(this.getPerimeter())
+                .append("; Area = ").append(this.getArea())
                 .append(".").toString();
     }
 }

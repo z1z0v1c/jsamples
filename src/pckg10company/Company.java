@@ -6,7 +6,7 @@ import java.util.List;
  * @author Aleksandar Zizovic
  */
 public class Company {
-    private static final String LIST_OF_PRODUCTS = "LIST OF PRODUCTS: \n";
+    private static final String LIST_OF_PRODUCTS = "List of products:\n\t";
 
     private final List<Product> listOfProducts;
     private double capital;
@@ -24,14 +24,18 @@ public class Company {
         }
 
         if (this.capital >= totalListPrice) {
-            System.out.println("Purchased");
+            System.out.print("\nPurchased - ");
 
             this.listOfProducts.clear();
             this.capital -= totalListPrice;
         } else {
-            System.out.println("Not enough funds");
+            System.out.print("\nNot enough funds - ");
         }
 
-        System.out.println(LIST_OF_PRODUCTS + this.listOfProducts + "\n");
+        System.out.print(LIST_OF_PRODUCTS);
+
+        for (Product product : listOfProducts) {
+            System.out.print(product);
+        }
     }
 }

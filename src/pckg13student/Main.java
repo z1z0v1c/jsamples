@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Write the same program as in Task 2, which returns a different result:
- * the name of the student and the points on the test are in some file "points.txt".
- * The task is to print the list of students (name, points and grade) sorted by points to the standard output.
+ * Write the same program as in Task 2, which returns a different result - the name of the student and the points on the
+ * test are in some file "points.txt". The task is to print the list of students (name, points and grade) sorted by
+ * points to the standard output.
  *
  * @author Aleksandar Zizovic
  */

@@ -21,15 +21,10 @@ public class Apartment extends RealEstate {
     }
 
     @Override
-    public double getPrice() {
-        return (getArea() + (basementArea + terraceArea) * 0.33) * getSquareFootagePrice();
-    }
-
-    @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", basement square footage: ").append(basementArea)
-                .append(", terrace square footage: ").append(terraceArea)
+                .append(", basement square footage: ").append(this.basementArea)
+                .append(", terrace square footage: ").append(this.terraceArea)
                 .toString();
     }
 }

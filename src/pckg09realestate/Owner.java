@@ -12,12 +12,12 @@ public class Owner {
             "Wrong entry! You have not entered the ID card number correctly!";
 
     private String id;
-    private String nameAndSurname;
+    private String firstAndLastName;
     private String identityCardNumber;
 
-    public Owner(String nameAndSurname, String id, String identityCardNumber) throws IllegalArgumentException {
-        if (nameAndSurname.matches(REGEX1)) {
-            this.nameAndSurname = nameAndSurname;
+    public Owner(String firstAndLastName, String id, String identityCardNumber) throws IllegalArgumentException {
+        if (firstAndLastName.matches(REGEX1)) {
+            this.firstAndLastName = firstAndLastName;
         } else {
             throw new IllegalArgumentException(WRONG_ENTRY_NAME);
         }
@@ -35,9 +35,9 @@ public class Owner {
         }
     }
 
-    public void setNameAndSurname(String nameAndSurname) throws IllegalArgumentException {
-        if (nameAndSurname.matches(REGEX1)) {
-            this.nameAndSurname = nameAndSurname;
+    public void setFirstAndLastName(String firstAndLastName) throws IllegalArgumentException {
+        if (firstAndLastName.matches(REGEX1)) {
+            this.firstAndLastName = firstAndLastName;
         } else {
             throw new IllegalArgumentException(WRONG_ENTRY_NAME);
         }
@@ -61,10 +61,10 @@ public class Owner {
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("Owner - [first name and last name: ").append(nameAndSurname)
-                .append(", Id: ").append(id)
-                .append(", identity card number=").append(identityCardNumber)
-                .append("]").toString();
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(":\n\t\tFirst and last name: ").append(this.firstAndLastName)
+                .append(",\n\t\tId: ").append(this.id)
+                .append(",\n\t\tIdentity card number=").append(this.identityCardNumber)
+                .toString();
     }
 }

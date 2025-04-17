@@ -20,8 +20,8 @@ public class DairyProduct extends Product {
     @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", milk origin: ").append(milkOrigin)
-                .append(". total product price: ").append(getTotalProductPrice())
+                .append("\n\t\tMilk origin: ").append(this.milkOrigin).append("\n\t\t")
+                .append(TOTAL_PRODUCT_PRICE).append(this.getTotalProductPrice()).append("\n\t")
                 .toString();
     }
 }

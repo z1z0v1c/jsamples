@@ -45,11 +45,11 @@ public class Hospital {
     @Override
     public String toString() {
         return new StringBuilder(this.getClass().getSimpleName())
-                .append(" - name: ").append(this.name)
-                .append("; executive: ").append(this.executive)
-                .append("; staff list: ").append(this.staffList)
-                .append("; doctors: ").append(this.doctors)
-                .append("; nurses: ").append(this.nurses)
+                .append(" - Name: ").append(this.name)
+                .append("; Executive: ").append(this.executive)
+                .append("; Staff list: ").append(this.staffList)
+                .append("; Doctors: ").append(this.doctors)
+                .append("; Nurses: ").append(this.nurses)
                 .toString();
     }
 }

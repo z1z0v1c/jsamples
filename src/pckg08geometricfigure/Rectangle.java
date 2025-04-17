@@ -8,27 +8,23 @@ public class Rectangle extends Square {
         this.sideB = sideB;
     }
 
-    public double getSideB() {
-        return sideB;
-    }
-
     @Override
     public double getPerimeter() {
-        return 2 * (getSideA() + sideB);
+        return 2 * (this.getSideA() + this.sideB);
     }
 
     @Override
-    public double area() {
-        return getSideA() * sideB;
+    public double getArea() {
+        return this.getSideA() * this.sideB;
     }
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("Rectangle - side a: ").append(getSideA())
-                .append("; side b: ").append(getSideB())
-                .append("; perimeter: ").append(this.getPerimeter())
-                .append("; area: ").append(area())
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(": Side A = ").append(this.getSideA())
+                .append("; Side B = ").append(this.sideB)
+                .append("; Perimeter = ").append(this.getPerimeter())
+                .append("; Area = ").append(this.getArea())
                 .append(".").toString();
     }
 }

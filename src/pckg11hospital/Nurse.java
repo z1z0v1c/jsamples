@@ -21,8 +21,8 @@ public class Nurse extends Staff {
     @Override
     public String toString() {
         return new StringBuilder(this.getClass().getSimpleName())
-                .append(super.toString())
-                .append("; shift: ").append(this.shift)
+                .append(super.toString()).append(", ")
+                .append(this.shift).append(" shift.")
                 .toString();
     }
 }

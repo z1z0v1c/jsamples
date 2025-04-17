@@ -18,14 +18,9 @@ public class House extends RealEstate {
     }
 
     @Override
-    public double getPrice() {
-        return (getArea() + yardArea * 0.15) * this.getSquareFootagePrice();
-    }
-
-    @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", yard square footage: ").append(yardArea)
+                .append(",\n\tYard square footage: ").append(this.yardArea)
                 .toString();
     }
 }

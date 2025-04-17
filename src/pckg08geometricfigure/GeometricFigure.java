@@ -12,14 +12,13 @@ public abstract class GeometricFigure {
 
     public abstract double getPerimeter();
 
-    public abstract double area();
+    public abstract double getArea();
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("Color: ").append(color)
-                .append("; Is filled: ").append(isFilled)
-                .append("; Perimeter: ").append(getPerimeter())
-                .append("; Area: ").append(area()).toString();
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(": Color = ").append(this.color)
+                .append("; Is filled = ").append(this.isFilled)
+                .toString();
     }
 }

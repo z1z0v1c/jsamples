@@ -9,24 +9,25 @@ public class Circle extends GeometricFigure {
     }
 
     public double getRadius() {
-        return radius;
+        return this.radius;
     }
 
     @Override
     public double getPerimeter() {
-        return 2 * radius * Math.PI;
+        return 2 * this.radius * Math.PI;
     }
 
     @Override
-    public double area() {
-        return radius * radius * Math.PI;
+    public double getArea() {
+        return this.radius * this.radius * Math.PI;
     }
 
     @Override
     public String toString() {
-        return new StringBuilder("Circle - radius: ").append(radius)
-                .append("; perimeter: ").append(getPerimeter())
-                .append("; area: ").append(area())
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(": Radius = ").append(this.radius)
+                .append(", Perimeter = ").append(this.getPerimeter())
+                .append(", Area = ").append(this.getArea())
                 .append(".").toString();
     }
 }

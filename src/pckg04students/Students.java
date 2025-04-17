@@ -3,10 +3,9 @@ package pckg04students;
 import java.util.Scanner;
 
 /**
- * Using a for loop, find and print the name of the student with the highest
- * number of points on the test. First, the number of students n is entered,
- * then the for loop is run n times and the student's name and number of points
- * are entered. Remember the one with the highest number of points.
+ * Using a for loop, find and print the name of the student with the highest number of points on the test. First, the
+ * number of students n is entered, then the for loop is run n times and the student's name and number of points are
+ * entered. Remember the one with the highest number of points.
  *
  * @author Aleksandar Zizovic
  */
@@ -15,9 +14,11 @@ public class Students {
     private static final String MAX_POINTS = "Student with the highest number of points: ";
     private static final String POINTS = "The number of points the student earned: ";
     private static final String WRONG_ENTRY = "Wrong entry! Try again!";
-    private static final String WRONG_ENTRY_NAME = "The name must have more than one character and must not contain numbers! Try again!";
+    private static final String WRONG_ENTRY_NAME =
+            "The name must have more than one character and must not contain numbers! Try again!";
     private static final String WRONG_ENTRY_POINTS = "The number of points must be positive! Try again!";
-    private static final String WRONG_ENTRY_NUMBER_OF_STUDENTS = "The number of students must be greater than 0! Try again!";
+    private static final String WRONG_ENTRY_NUMBER_OF_STUDENTS =
+            "The number of students must be greater than 0! Try again!";
     private static final String REGEX = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$";
     private static final String CONTINUE = "Do you want to continue?";
     private static final String THE_END = "End of program!";
@@ -50,7 +51,7 @@ public class Students {
 
             System.out.println(CONTINUE);
 
-            // Continue or exit the program
+            // Exit (or continue)
             if (!shouldContinue()) {
                 System.out.println(THE_END);
                 break;
@@ -60,7 +61,7 @@ public class Students {
         input.close();
     }
 
-    // Checking if the number has been entered
+    // Validate number entry
     private static int numberEntry() {
         while (!input.hasNextInt()) {
             System.out.println(WRONG_ENTRY);
@@ -70,7 +71,7 @@ public class Students {
         return input.nextInt();
     }
 
-    // Validation of the entered number of students
+    // Validate entered number of students
     private static int getNumberOfStudents() {
         int number = numberEntry();
 
@@ -82,7 +83,7 @@ public class Students {
         return number;
     }
 
-    // Validation of the entered number of points
+    // Validate entered number of points
     private static int pointsEntry() {
         int broj = numberEntry();
 
@@ -94,7 +95,7 @@ public class Students {
         return broj;
     }
 
-    // Validation of the entered name and surname
+    // Validate entered first and last name
     private static String nameEntry() {
         String name = "";
 
@@ -109,7 +110,7 @@ public class Students {
         return name;
     }
 
-    // Response validation to continue or exit the program
+    // Validate response for program termination
     private static boolean shouldContinue() {
         String answer = input.next();
 

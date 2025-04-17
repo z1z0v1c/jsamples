@@ -3,16 +3,15 @@ package pckg06calculator;
 import java.util.Scanner;
 
 /**
- * Modification of the previous calculator.
- * Place all operations in special methods, and call the corresponding method when necessary.
- * Spin in a loop until a non-existent code (default switch code) is entered for the operation code.
+ * Modification of the previous calculator. Place all operations in special methods, and call the corresponding method
+ * when necessary. Spin in a loop until a non-existent code (default switch code) is entered for the operation code.
  *
  * @author Aleksandar Zizovic
  */
 public class Calculator {
     private static final String ENTRY = "Enter %s number: ";
-    private static final String ENTRY_OPERATION = "Enter the desired operation (a, s, m, d)-any other key for exit: ";
-    private static final String RESULT = "%s of numbers entered is: %f";
+    private static final String ENTRY_OPERATION = "Enter the desired operation (a, s, m, d) or any other key to exit: ";
+    private static final String RESULT = "%s of entered numbers is: %f";
     private static final String WRONG_ENTRY_NUMBER = "The entered value is not a number! Try again!";
     private static final String WRONG_ENTRY_ZERO = "It is not possible to divide by zero!";
     private static final String THE_END = "End of program!";
@@ -28,11 +27,11 @@ public class Calculator {
             System.out.printf(ENTRY + "%n", "second");
             double secondNumber = numberEntry();
 
-            // Operation selection
+            // Chose operation
             System.out.println(ENTRY_OPERATION);
             String operation = scanner.next();
 
-            // Displaying the results for the selected operation
+            // Display result
             switch (operation) {
                 case "a":
                     System.out.printf(RESULT + "%n", "Sum", add(firstNumber, secondNumber));
@@ -59,7 +58,7 @@ public class Calculator {
         scanner.close();
     }
 
-    // Verification of number entry
+    // Validate number entry
     private static double numberEntry() {
         while (!scanner.hasNextDouble()) {
             System.out.println(WRONG_ENTRY_NUMBER);

@@ -9,25 +9,25 @@ public class Triangle extends GeometricFigure {
     }
 
     public double getSideA() {
-        return sideA;
+        return this.sideA;
     }
 
     @Override
     public double getPerimeter() {
-        return 3 * sideA;
+        return 3 * this.sideA;
     }
 
     @Override
-    public double area() {
-        return (sideA * sideA * Math.sqrt(3)) / 4;
+    public double getArea() {
+        return (this.sideA * this.sideA * Math.sqrt(3)) / 4;
     }
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("Equilateral triangle - side: ").append(sideA)
-                .append("; perimeter: ").append(getPerimeter())
-                .append("; area: ").append(area())
+        return new StringBuilder(this.getClass().getSimpleName())
+                .append(": Side = ").append(this.sideA)
+                .append("; Perimeter = ").append(this.getPerimeter())
+                .append("; Area = ").append(this.getArea())
                 .append(".").toString();
     }
 }

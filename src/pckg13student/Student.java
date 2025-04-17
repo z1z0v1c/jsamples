@@ -36,11 +36,10 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return new StringBuilder(this.getClass().getSimpleName())
-                .append(" - first name: ").append(this.firstName)
-                .append("; last name").append(this.lastName)
-                .append("; number of points").append(this.points)
-                .append("; grade").append(this.getGrade())
+        return new StringBuilder(this.getClass().getSimpleName()).append(": ")
+                .append(this.firstName).append(" ").append(this.lastName)
+                .append(", points = ").append(this.points)
+                .append(", grade = ").append(this.getGrade())
                 .append("\n").toString();
     }
 }

@@ -27,11 +27,11 @@ public abstract class Staff {
     @Override
     public String toString() {
         return new StringBuilder(getClass().getSimpleName())
-                .append(" - first name: ").append(this.firstName)
-                .append("; last name: ").append(this.lastName)
-                .append("; address: ").append(this.address)
-                .append("; telephone: ").append(this.telephone)
-                .append("; birthday: ").append(this.birthday)
+                .append(": ").append(this.firstName)
+                .append(" ").append(this.lastName)
+                .append(", ").append(this.address)
+                .append(", ").append(this.telephone)
+                .append(", ").append(this.birthday)
                 .toString();
     }
 }

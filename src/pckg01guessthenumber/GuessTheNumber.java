@@ -4,13 +4,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Write a program to guess a randomly generated number in the range from 1 to 50.
- * The program should work in the following way: The user enters an integer via the standard input.
- * The number to be guessed should be generated in the range from 1 to 50 using the Random class.
- * After that, write the required number to the standard output and depending on the result of guessing, print the corresponding message.
- * If the correct number was guessed, write: 'Unbelievably you guessed the correct number',
- * if there is a difference between the numbers 5 or less : 'Good try, you were very close',
- * and if the difference is greater than 5 : 'Better luck next time'.
+ * Write a program to guess a randomly generated number in the range from 1 to 50. The program should work in the
+ * following way:
+ * <p>
+ *  - The user enters an integer via the standard input.
+ *  - The number to be guessed should be generated in the range from 1 to 50 using the Random class.
+ *  - Write the required number to the standard output and depending on the result of guessing, print the corresponding
+ *  message.
+ *  - If the correct number was guessed, write: 'Unbelievably you guessed the correct number'.
+ *  - If there is a difference between the numbers 5 or less : 'Good try, you were very close'.
+ *  - If the difference is greater than 5 : 'Better luck next time'.
  *
  * @author Aleksandar Zizovic
  */
@@ -30,7 +33,7 @@ public class GuessTheNumber {
         while (true) {
             int enteredNumber;
 
-            // Number entry and validation
+            // Validate number entry
             do {
                 System.out.println(ENTRY);
 
@@ -42,7 +45,7 @@ public class GuessTheNumber {
                 enteredNumber = scanner.nextInt();
             } while (0 >= enteredNumber || 50 < enteredNumber);
 
-            // Random number generation and display
+            // Generate and display random number
             Random randomGenerator = new Random();
             int randomNumber = randomGenerator.nextInt(50) + 1;
 
@@ -59,7 +62,7 @@ public class GuessTheNumber {
 
             System.out.println(CONTINUE);
 
-            // Response validation to continue or exit the program
+            // Exit (or continue)
             if (!shouldContinue()) {
                 System.out.println(THE_END);
                 break;
@@ -69,7 +72,7 @@ public class GuessTheNumber {
         scanner.close();
     }
 
-    // Response validation to continue or exit the program
+    // Validate input for program termination
     private static boolean shouldContinue() {
         String answer = scanner.next();
 

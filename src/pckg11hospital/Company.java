@@ -30,7 +30,7 @@ public class Company {
         }
 
         return new StringBuilder()
-                .append(NUMBER_OF_HOSPITALS).append(hospitals.size())
+                .append(NUMBER_OF_HOSPITALS).append(this.hospitals.size())
                 .append(NUMBER_OF_DOCTORS).append(numberOfDoctors)
                 .append(NUMBER_OF_NURSES).append(numberOfNurses)
                 .append(NUMBER_OF_OTHER_STUFF).append(numberOfStuff)

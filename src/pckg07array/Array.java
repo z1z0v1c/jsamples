@@ -4,9 +4,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 /**
- * To enter a series of integers of length n (which is also entered), sort the series,
- * check if it contains the number x and print the first 5 members of the series to standard output.
- * Use the Arrays class.
+ * To enter a series of integers of length n (which is also entered), sort the series, check if it contains the number x
+ * and print the first 5 members of the series to standard output. Use the Arrays class.
  *
  * @author Aleksandar Zizovic
  */
@@ -16,22 +15,23 @@ public class Array {
     private static final String WRONG_ENTRY_LENGTH = "Wrong entry! Minimum string length is 5! Try again! ";
     private static final String REQUESTED_NUMBER = "Enter the search number: ";
     private static final String FIRST_FIVE = "The first 5 members of the sorted array are: ";
-    private static final String CONTAINS = "\nTHE STRING CONTAINS THE REQUESTED NUMBER\n";
-    private static final String DOES_NOT_CONTAIN = "\nTHE STRING DOES NOT CONTAIN THE REQUESTED NUMBER\n";
+    private static final String CONTAINS = "\nTHE STRING CONTAINS THE REQUESTED NUMBER!\n";
+    private static final String DOES_NOT_CONTAIN = "\nTHE STRING DOES NOT CONTAIN THE REQUESTED NUMBER!\n";
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int[] array = arrayEntry();
 
-        sort(array);
+        Arrays.sort(array);
+
         numberInArray(array);
         printFirstFive(array);
 
         scanner.close();
     }
 
-    // Validation of number entry
+    // Validate number entry
     private static int numberEntry() {
         while (!scanner.hasNextInt()) {
             System.out.println(WRONG_ENTRY);
@@ -41,7 +41,7 @@ public class Array {
         return scanner.nextInt();
     }
 
-    // Entering the length and members of the string
+    // Enter the length and members of the string
     private static int[] arrayEntry() {
         System.out.println(ARRAY_LENGTH);
         int arrayLength;
@@ -65,11 +65,6 @@ public class Array {
         return array;
     }
 
-    // Array sorting
-    private static void sort(int[] array) {
-        Arrays.sort(array);
-    }
-
     // Search for a given number in a sequence
     private static void numberInArray(int[] array) {
         System.out.println(REQUESTED_NUMBER);
@@ -91,7 +86,7 @@ public class Array {
         }
     }
 
-    // Printing the first 5 members of the sequence
+    // Print the first 5 members of the sequence
     private static void printFirstFive(int[] array) {
         System.out.println(FIRST_FIVE);
 

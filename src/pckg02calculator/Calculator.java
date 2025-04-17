@@ -3,11 +3,9 @@ package pckg02calculator;
 import java.util.Scanner;
 
 /**
- * Write a program that will represent a simple calculator.
- * The program should work so that the user enters two integers,
- * then the code of the operation he wants to perform
- * ('a' - addition, 's' - subtraction, 'm' - multiplication, 'd' - division).
- * The result of the operation should be printed to the standard output.
+ * Write a program that will represent a simple calculator. The program should work so that the user enters two integers,
+ * then the code of the operation he wants to perform ('a' - addition, 's' - subtraction, 'm' - multiplication, 'd' -
+ * division). The result of the operation should be printed to the standard output.
  *
  * @author Aleksandar Zizovic
  */
@@ -32,11 +30,11 @@ public class Calculator {
             System.out.printf(ENTRY + "%n", "second");
             double secondNumber = numberEntry();
 
-            // Operation selection
+            // Choose operation
             System.out.println(ENTRY_OPERATION);
             String operation = stringEntry();
 
-            // Displaying the results for the selected operation
+            // Display the results
             switch (operation) {
                 case "a":
                     System.out.printf(RESULT + "%n", "Sum", (firstNumber + secondNumber));
@@ -60,7 +58,7 @@ public class Calculator {
 
             System.out.println(CONTINUE);
 
-            // Exit
+            // Exit (or continue)
             if (!shouldContinue()) {
                 System.out.println(THE_END);
                 break;
@@ -70,7 +68,7 @@ public class Calculator {
         scanner.close();
     }
 
-    // Verification of number entry
+    // Validate number entry
     private static double numberEntry() {
         while (!scanner.hasNextDouble()) {
             System.out.println(WRONG_ENTRY_NUMBER);
@@ -80,7 +78,7 @@ public class Calculator {
         return scanner.nextDouble();
     }
 
-    // Checking operation selection
+    // Validate operation selection
     private static String stringEntry() {
         while (!scanner.hasNext("[asmd]")) {
             System.out.println(WRONG_ENTRY);
@@ -90,7 +88,7 @@ public class Calculator {
         return scanner.next();
     }
 
-    // Response validation to continue or exit the program
+    // Validate response for program termination
     private static boolean shouldContinue() {
         String answer = scanner.next();
 

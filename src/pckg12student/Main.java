@@ -9,15 +9,12 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Write a program that enables the entry of the student's name and the number
- * of points scored on the test via standard input (until a certain character is
- * entered to stop data entry). The number of points can be from 0 to 100. As a
- * result of the program, the output file "grades.txt" is expected, which will
- * contain a list of all students sorted by points, from the highest to the
- * lowest, and where, apart from the name of the student and the color of the
- * points, find the grade he got in the exams. Grade 10 if he had more than 90
- * points, 9 if he had between 81 and 90... Up to 5 if he had less than 51
- * points.
+ * Write a program that enables the entry of the student's name and the number of points scored on the test via standard
+ * input (until a certain character is entered to stop data entry). The number of points can be from 0 to 100. As a
+ * result of the program, the output file "grades.txt" is expected, which will contain a list of all students sorted by
+ * points, from the highest to the lowest, and where, apart from the name of the student and the color of the points,
+ * find the grade he got in the exams. Grade 10 if he had more than 90 points, 9 if he had between 81 and 90... Up to 5
+ * if he had less than 51 points.
  *
  * @author Aleksandar Zizovic
  */

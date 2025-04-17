@@ -33,8 +33,6 @@ public abstract class RealEstate {
         return this.area;
     }
 
-    public abstract double getPrice();
-
     public double getSquareFootagePrice() {
         return switch (this.zone) {
             case 1 -> 3000;
@@ -47,10 +45,10 @@ public abstract class RealEstate {
     @Override
     public String toString() {
         return new StringBuilder(this.getClass().getSimpleName())
-                .append(" - address: ").append(this.address)
-                .append(", zone: ").append(this.zone)
-                .append(", square footage: ").append(this.area)
-                .append(" ").append(this.owner.toString())
+                .append(":\n\tAddress: ").append(this.address)
+                .append(",\n\tZone: ").append(this.zone)
+                .append(",\n\tSquare footage: ").append(this.getSquareFootagePrice())
+                .append("\n\t").append(this.owner.toString())
                 .toString();
     }
 }

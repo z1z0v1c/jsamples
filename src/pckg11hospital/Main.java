@@ -11,8 +11,7 @@ import java.util.List;
  * - Staff
  * - Nurses
  * <p>
- * The hospital contains information about the name, director and number of employees.
- * The data stored about the doctor are:
+ * The hospital contains information about the name, director and number of employees. The data stored about the doctor are:
  * - College
  * - Name
  * - Surname

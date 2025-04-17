@@ -20,8 +20,8 @@ public class Juice extends Product {
     @Override
     public String toString() {
         return new StringBuilder(super.toString())
-                .append(", composition: ").append(composition)
-                .append(TOTAL_PRODUCT_PRICE).append(getTotalProductPrice())
+                .append("\n\t\tComposition: ").append(this.composition).append("\n\t\t")
+                .append(TOTAL_PRODUCT_PRICE).append(this.getTotalProductPrice()).append("\n\t")
                 .toString();
     }
 }

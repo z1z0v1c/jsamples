@@ -4,7 +4,7 @@ package pckg10company;
  * @author Aleksandar Zizovic
  */
 public abstract class Product {
-    protected static final String TOTAL_PRODUCT_PRICE = ". TOTAL PRODUCT PRICE: ";
+    protected static final String TOTAL_PRODUCT_PRICE = "Total product price: ";
 
     private final String name;
     private final double price;
@@ -18,11 +18,11 @@ public abstract class Product {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public double getPrice() {
-        return price;
+        return this.price;
     }
 
     public abstract double getTotalProductPrice();
@@ -30,9 +30,9 @@ public abstract class Product {
     @Override
     public String toString() {
         return new StringBuilder(this.getClass().getSimpleName())
-                .append(" - product name: ").append(name)
-                .append(", product price: ").append(price)
-                .append(", best before: ").append(bestBefore)
+                .append(":\n\t\tProduct name: ").append(this.name)
+                .append("\n\t\tProduct price: ").append(this.price)
+                .append("\n\t\tBest before: ").append(this.bestBefore)
                 .toString();
     }
 }
