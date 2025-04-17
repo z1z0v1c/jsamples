@@ -17,7 +17,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input;
-        File file = new File("points.txt");
+
+        File file = new File("src/" + Main.class.getPackageName() + "/points.txt");
+
         List<Student> students = new ArrayList<>();
 
         // Read from the file

@@ -1,2 +1,0 @@
-Pera Peric: points = 89, grade = 9
-Aca Zizovic: points = 74, grade = 8
