@@ -7,17 +7,18 @@ import java.util.List;
  * Write a program that describes the following scenario:
  * <p>
  * The company owns a number of private hospitals. Each hospital has its own employees. Employees can be:
- * - Doctors
- * - Staff
- * - Nurses
+ *      - Doctors
+ *      - Staff
+ *      - Nurses
  * <p>
- * The hospital contains information about the name, director and number of employees. The data stored about the doctor are:
- * - College
- * - Name
- * - Surname
- * - Address
- * - Phone
- * - Date of Birth
+ * The hospital contains information about the name, director and number of employees. The data stored about the doctor
+ * are:
+ *      - College
+ *      - Name
+ *      - Surname
+ *      - Address
+ *      - Phone
+ *      - Date of Birth
  * <p>
  * We keep the same things about the person, except for the college information. There is also a shift for nurses.
  * Company contains a toString() method that prints out how many hospitals and doctors, nurses, and staff each have.

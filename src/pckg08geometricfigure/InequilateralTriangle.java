@@ -1,5 +1,8 @@
 package pckg08geometricfigure;
 
+/**
+ * @author Aleksandar Zizovic
+ */
 public class InequilateralTriangle extends Triangle {
     private final double sideB;
     private final double sideC;

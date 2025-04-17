@@ -1,5 +1,8 @@
 package pckg08geometricfigure;
 
+/**
+ * @author Aleksandar Zizovic
+ */
 public class Rectangle extends Square {
     private final double sideB;
 

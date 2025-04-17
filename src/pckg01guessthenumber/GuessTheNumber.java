@@ -7,13 +7,13 @@ import java.util.Scanner;
  * Write a program to guess a randomly generated number in the range from 1 to 50. The program should work in the
  * following way:
  * <p>
- *  - The user enters an integer via the standard input.
- *  - The number to be guessed should be generated in the range from 1 to 50 using the Random class.
- *  - Write the required number to the standard output and depending on the result of guessing, print the corresponding
- *  message.
- *  - If the correct number was guessed, write: 'Unbelievably you guessed the correct number'.
- *  - If there is a difference between the numbers 5 or less : 'Good try, you were very close'.
- *  - If the difference is greater than 5 : 'Better luck next time'.
+ *      - The user enters an integer via the standard input.
+ *      - The number to be guessed should be generated in the range from 1 to 50 using the Random class.
+ *      - Write the required number to the standard output and depending on the result of guessing, print the corresponding
+ *      message.
+ *      - If the correct number was guessed, write: 'Unbelievably you guessed the correct number'.
+ *      - If there is a difference between the numbers 5 or less : 'Good try, you were very close'.
+ *      - If the difference is greater than 5 : 'Better luck next time'.
  *
  * @author Aleksandar Zizovic
  */

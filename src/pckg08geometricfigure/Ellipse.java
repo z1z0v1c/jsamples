@@ -1,5 +1,8 @@
 package pckg08geometricfigure;
 
+/**
+ * @author Aleksandar Zizovic
+ */
 public class Ellipse extends Circle {
     private final double radiusB;
 

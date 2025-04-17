@@ -1,5 +1,8 @@
 package pckg08geometricfigure;
 
+/**
+ * @author Aleksandar Zizovic
+ */
 public class Square extends GeometricFigure {
     private final double sideA;
 

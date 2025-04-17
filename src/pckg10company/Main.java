@@ -7,9 +7,9 @@ import java.util.List;
  * Write a program that describes the following scenario:
  * <p>
  * The company is engaged in the resale of food products. We distinguish products by the following product categories:
- *  - Dairy products
- *  - Coffee, Juices
- *  - Meat
+ *      - Dairy products
+ *      - Coffee, Juices
+ *      - Meat
  * <p>
  * We store information about all products: product name, product price and expiration date. With dairy products, we
  * also keep the origin of the milk. With coffee, is it whole or ground? We care about juices, what the juice is made of.

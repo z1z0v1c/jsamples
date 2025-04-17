@@ -3,7 +3,7 @@ package pckg09realestate;
 /**
  * Create the Real Estate project in the following way: Abstract Real Estate class that has the following attributes:
  * <p>
- *	- Address, zone, square footage, and information about the owner/instance of the Owner class.
+ *		- Address, zone, square footage, and information about the owner/instance of the Owner class.
  *  	- The owner has a full first and last name, ID, and card number.
  *  	- The derived classes, Apartment and House, have a toString() method where all information about the property,
  *  	including the Owner and the price, is printed.

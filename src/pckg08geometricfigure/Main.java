@@ -3,13 +3,13 @@ package pckg08geometricfigure;
 /**
  * Create the Geometric Figures project as follows:
  * <p>
- *  - Abstract class Geometric Figure
- *  - Three basic classes Circle, Square, Triangle
- *  - Derived classes Ellipse, Rectangle and Inequilateral Triangle
- *  - Classes have an overlaid method toString() in which the perimeter and area are printed
- *  - Each class should contain 3 constructors
- *  - The Triangle class defines an equilateral Triangle
- *  - The perimeter of the ellipse is calculated as aPI(9-sqrt35)/2, and the area as abPI
+ *      - Abstract class Geometric Figure
+ *      - Three basic classes Circle, Square, Triangle
+ *      - Derived classes Ellipse, Rectangle and Inequilateral Triangle
+ *      - Classes have an overlaid method toString() in which the perimeter and area are printed
+ *      - Each class should contain 3 constructors
+ *      - The Triangle class defines an equilateral Triangle
+ *      - The perimeter of the ellipse is calculated as aPI(9-sqrt35)/2, and the area as abPI
  * <p>
  * Create the Main class and in it create instances of the Geometry class and create objects of all base and derived
  * classes with arbitrary arguments. Print the String representation of the object - toString()

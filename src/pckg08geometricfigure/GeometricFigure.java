@@ -1,5 +1,8 @@
 package pckg08geometricfigure;
 
+/**
+ * @author Aleksandar Zizovic
+ */
 public abstract class GeometricFigure {
     private final String color;
     private final boolean isFilled;
